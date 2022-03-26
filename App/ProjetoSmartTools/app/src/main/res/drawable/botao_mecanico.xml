@@ -6,18 +6,18 @@
         android:height="50dp"/>
 
     <corners
-        android:radius="20dp" />
+        android:radius="40dp" />
 
     <stroke
         android:width="5dp"
-        android:color="#CA965C"/>
+        android:color="#2B4E4E"/>
     <solid
-        android:color="#9B7346"/>
+        android:color="#2B4E4E"/>
 
     <gradient android:type="radial"
         android:gradientRadius="200"
-        android:startColor="#9B7346"
-        android:endColor="#DFB07A" />
+        android:startColor="#2B4E4E"
+        android:endColor="#468181" />
 
 
 </shape>

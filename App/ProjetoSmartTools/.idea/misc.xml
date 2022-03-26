@@ -13,6 +13,11 @@
         <entry key="..\:/Users/bruna.martins.b.melo/Downloads/ProjetoSmartTools/app/src/main/res/layout/activity_home.xml" value="0.16111111111111112" />
         <entry key="..\:/Users/bruna.martins.b.melo/Downloads/ProjetoSmartTools/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/bruna.martins.b.melo/Downloads/ProjetoSmartTools/app/src/main/res/layout/activity_splash.xml" value="0.11574074074074074" />
+        <entry key="app/src/main/res/drawable/background_gradiente.xml" value="0.259375" />
+        <entry key="app/src/main/res/drawable/botao_cliente.xml" value="0.259375" />
+        <entry key="app/src/main/res/drawable/botao_mecanico.xml" value="0.259375" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.24322916666666666" />
+        <entry key="app/src/main/res/layout/activity_login_mecanico.xml" value="0.24322916666666666" />
       </map>
     </option>
   </component>
