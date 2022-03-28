@@ -13,8 +13,8 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun olaMecanico(v: View) {
-        Toast.makeText(this, "Logando como Mecânico", Toast.LENGTH_LONG).show()
-
+        val telaLoginMec = Intent(this, MecanicoLogin::class.java)
+        startActivity(telaLoginMec)
     }
 
     fun olaCliente(v: View) {
