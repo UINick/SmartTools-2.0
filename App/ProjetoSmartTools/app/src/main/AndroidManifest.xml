@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name=".MecanicoLogin"
+            android:name=".LoginDoMecanico"
             android:exported="false" />
         <activity
             android:name=".LoginMecanico"
+            android:exported="false" />
+        <activity
+            android:name=".MecanicoLogin"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"

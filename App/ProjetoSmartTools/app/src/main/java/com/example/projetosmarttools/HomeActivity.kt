@@ -13,7 +13,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun olaMecanico(v: View) {
-        val telaLoginMec = Intent(this, MecanicoLogin::class.java)
+        val telaLoginMec = Intent(this, LoginDoMecanico::class.java)
         startActivity(telaLoginMec)
     }
 
