@@ -22,25 +22,32 @@
             android:layout_marginRight="30dp"
             ></ImageView>
 
-        <EditText
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:text="O aplicativo para o dia a dia de sua oficina."
-            ></EditText>
+            ></TextView>
 
 
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginRight="27dp"
+                >
+
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Email">
+                    android:hint="Email"
+                    android:inputType="textEmailAddress">
+
                 </com.google.android.material.textfield.TextInputEditText>
 
 
