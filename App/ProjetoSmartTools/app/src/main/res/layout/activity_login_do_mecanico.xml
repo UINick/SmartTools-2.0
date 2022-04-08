@@ -8,7 +8,7 @@
     android:background="@drawable/background_gradiente">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -76,12 +76,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginRight="120dp"
+                android:text="Não possui cadastro?"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="160dp"
+                android:layout_marginRight="120dp"
+                android:text="Clique aqui"
+                android:onClick="goToCadastroMecanico"
+                />
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="100dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
+                android:background="@drawable/botao_cliente"
                 android:text="Entrar">
             </Button>
         </LinearLayout>
