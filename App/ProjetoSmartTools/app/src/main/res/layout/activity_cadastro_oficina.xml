@@ -6,133 +6,134 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginDoMecanico"
-    android:background="@drawable/background_gradiente">
+    android:background="#F5F2E7">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@mipmap/login_logo"
-            android:layout_gravity="center"
-            android:layout_marginTop="27dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp">
+            android:layout_height="506dp"
+            android:orientation="vertical"
+            android:layout_marginTop="60dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="112dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/view_with_corner_radius">
 
-        </ImageView>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="25dp"
-            android:text="O aplicativo para o dia a dia de sua oficina.">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cadastro de Oficinas"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="33dp"
+                android:textSize="24sp"
+                />
 
-        </TextView>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="27dp"
-            android:layout_marginTop="27dp"
-            android:layout_marginRight="27dp"
-            android:tooltipText="Digite o nome da Oficina">
-
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Nome da Oficina"
-                android:inputType="text">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginRight="27dp"
+                android:tooltipText="Digite o nome da Oficina">
 
-            </com.google.android.material.textfield.TextInputEditText>
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Nome da Oficina"
+                    android:inputType="text">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="27dp"
-            android:layout_marginTop="27dp"
-            android:layout_marginRight="27dp"
-            android:tooltipText="Digite seu e-mail">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Email"
-                android:inputType="textEmailAddress">
-            </com.google.android.material.textfield.TextInputEditText>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginRight="27dp"
+                android:tooltipText="Digite seu e-mail">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="27dp"
-            android:layout_marginTop="27dp"
-            android:layout_marginRight="27dp"
-            android:tooltipText="Digite seu telefone">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Telefone"
-                android:inputType="number">
-            </com.google.android.material.textfield.TextInputEditText>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginRight="27dp"
+                android:tooltipText="Digite seu telefone">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="27dp"
-            android:layout_marginTop="27dp"
-            android:layout_marginRight="27dp"
-            android:tooltipText="Digite seu telefone">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Telefone"
+                    android:inputType="number">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Telefone"
-                android:inputType="number">
-            </com.google.android.material.textfield.TextInputEditText>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginRight="27dp"
+                android:tooltipText="Digite seu telefone">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="27dp"
-            android:layout_marginTop="27dp"
-            android:layout_marginRight="27dp"
-            android:tooltipText="Digite seu endereço">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Cnpj"
+                    android:inputType="number">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Endereço"
-                android:inputType="text">
-            </com.google.android.material.textfield.TextInputEditText>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginRight="27dp"
+                android:tooltipText="Digite seu endereço">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Endereço"
+                    android:inputType="text">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
 
-
-
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
-                android:text="Continuar">
+                android:text="Continuar"
+                android:background="@drawable/botao_cliente">
             </Button>
         </LinearLayout>
-
 
     </LinearLayout>
 
