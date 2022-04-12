@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name=".cadastroSenha"
+            android:name=".CadastroPassword"
+            android:exported="false" />
+        <activity
+            android:name=".CadastroSenha"
             android:exported="false" />
         <activity
             android:name=".CadastroOficina"
