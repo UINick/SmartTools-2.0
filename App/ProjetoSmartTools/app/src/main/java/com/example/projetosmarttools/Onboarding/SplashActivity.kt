@@ -1,10 +1,11 @@
-package com.example.projetosmarttools
+package com.example.projetosmarttools.Onboarding
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.example.projetosmarttools.R
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {

@@ -1,7 +1,8 @@
-package com.example.projetosmarttools
+package com.example.projetosmarttools.Cadastro
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.projetosmarttools.R
 
 class CadastroPassword : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

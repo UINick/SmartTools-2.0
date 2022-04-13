@@ -1,10 +1,12 @@
-package com.example.projetosmarttools
+package com.example.projetosmarttools.Onboarding
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.projetosmarttools.Login.LoginDoMecanico
+import com.example.projetosmarttools.R
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

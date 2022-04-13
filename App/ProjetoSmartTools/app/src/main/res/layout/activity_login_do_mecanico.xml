@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginDoMecanico"
+    tools:context=".Login.LoginDoMecanico"
     android:background="@drawable/background_gradiente">
 
     <LinearLayout
