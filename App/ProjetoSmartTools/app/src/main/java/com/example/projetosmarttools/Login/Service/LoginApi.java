@@ -1,4 +1,4 @@
-package com.example.projetosmarttools.Login;
+package com.example.projetosmarttools.Login.Service;
 
 public interface LoginApi {
 

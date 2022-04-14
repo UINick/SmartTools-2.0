@@ -12,13 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name=".Cadastro.CadastroPassword"
+            android:name=".Cadastro.Activities.CadastroPassword"
             android:exported="false" />
         <activity
             android:name=".CadastroSenha"
             android:exported="false" />
         <activity
-            android:name=".Cadastro.CadastroOficina"
+            android:name=".Cadastro.Activities.CadastroOficina"
             android:exported="false" />
         <activity
             android:name=".cadastro_senha"
@@ -27,7 +27,7 @@
             android:name=".cadastro_oficina"
             android:exported="false" />
         <activity
-            android:name=".Login.LoginDoMecanico"
+            android:name=".Login.Activities.LoginDoMecanico"
             android:exported="false" />
         <activity
             android:name=".LoginMecanico"

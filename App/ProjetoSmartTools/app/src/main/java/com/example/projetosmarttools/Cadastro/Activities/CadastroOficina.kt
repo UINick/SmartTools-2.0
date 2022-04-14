@@ -1,4 +1,4 @@
-package com.example.projetosmarttools.Cadastro
+package com.example.projetosmarttools.Cadastro.Activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

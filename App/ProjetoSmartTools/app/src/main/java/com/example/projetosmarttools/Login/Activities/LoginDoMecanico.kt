@@ -1,10 +1,10 @@
-package com.example.projetosmarttools.Login
+package com.example.projetosmarttools.Login.Activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.projetosmarttools.Cadastro.CadastroOficina
+import com.example.projetosmarttools.Cadastro.Activities.CadastroOficina
 import com.example.projetosmarttools.R
 
 class LoginDoMecanico : AppCompatActivity() {
