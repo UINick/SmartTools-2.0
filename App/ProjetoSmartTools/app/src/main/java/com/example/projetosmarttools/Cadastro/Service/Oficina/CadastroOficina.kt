@@ -12,7 +12,7 @@ interface CadastroOficina {
     fun post(@Body novoUsuario: CadastroOficinaVO): Call<Void>
 
     companion object {
-        var BASE_URL = "https://apirest-smarttools.herokuapp.com/swagger-ui/"
+        var BASE_URL = "https://apirest-smarttools.herokuapp.com/"
         fun criar(): CadastroOficina {
             val retrofit = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())

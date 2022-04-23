@@ -44,32 +44,6 @@ class CadastroOficina : AppCompatActivity() {
 
     fun goToConfirmPassword(v:View) {
 
-//        apiClient.getApiService().cadastro(CadastroRequest(
-//            nomeOficina = tiNome.editText.toString(),
-//            email = tiEmail.editText.toString(),
-//            cnpj = tiCnpj.editText.toString(),
-//            telefone = tiTelefone.editText.toString(),
-//            senha = tiSenha.editText.toString()
-//        ))
-//            .enqueue(object : Callback<CadastroResponse> {
-//                override fun onResponse(
-//                    call: Call<CadastroResponse>,
-//                    response: Response<CadastroResponse>
-//                ) {
-//                    val cadastroResponse = response.body()
-//                    if (cadastroResponse?.statusCode == 200 ) {
-//                        Toast.makeText(baseContext, "Deu certo hehe", Toast.LENGTH_SHORT).show()
-//                    } else {
-//                        Toast.makeText(baseContext, "VISH status errado", Toast.LENGTH_SHORT).show()
-//                    }
-//                }
-//
-//                override fun onFailure(call: Call<CadastroResponse>, t: Throwable) {
-//                    Toast.makeText(baseContext, "Faiou", Toast.LENGTH_SHORT).show()
-//                }
-//
-//            })
-
         val novaOficina = CadastroOficinaVO(
             tiNome.editText?.text.toString(),
             tiEmail.editText?.text.toString(),
@@ -91,6 +65,7 @@ class CadastroOficina : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<Void>, t: Throwable) {
+                println("ERRO AQUI: ${t.message}")
                 Toast.makeText(baseContext, "Erro: ${t.stackTrace}", Toast.LENGTH_SHORT).show()
             }
 
