@@ -1,6 +1,6 @@
 package com.example.projetosmarttools.Login.Service
 
-data class Login(
+data class LoginMecanicoVO(
     val email: String,
-    val senha : String
+    val senha: String
 )

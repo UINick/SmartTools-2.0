@@ -19,11 +19,11 @@ import retrofit2.Response
 
 class CadastroOficina : AppCompatActivity() {
 
-    lateinit var tiNome: TextInputLayout
-    lateinit var tiEmail: TextInputLayout
-    lateinit var tiCnpj: TextInputLayout
-    lateinit var tiTelefone: TextInputLayout
-    lateinit var tiSenha: TextInputLayout
+    private lateinit var tiNome: TextInputLayout
+    private lateinit var tiEmail: TextInputLayout
+    private lateinit var tiCnpj: TextInputLayout
+    private lateinit var tiTelefone: TextInputLayout
+    private lateinit var tiSenha: TextInputLayout
 
     private lateinit var sessionManager: SessionManager
     private lateinit var apiClient: ApiClient

@@ -40,6 +40,7 @@
                 android:layout_marginTop="27dp"
                 android:layout_marginRight="27dp"
                 android:tooltipText="Escreva seu E-mail"
+                android:id="@+id/ti_email_l"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -61,6 +62,7 @@
             android:layout_marginRight="27dp"
             android:tooltipText="Escreva sua senha"
             app:passwordToggleEnabled="true"
+            android:id="@+id/ti_senha_l"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -103,7 +105,8 @@
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
                 android:background="@drawable/botao_cliente"
-                android:text="Entrar">
+                android:text="Entrar"
+                android:onClick="entrar">
             </Button>
         </LinearLayout>
 
