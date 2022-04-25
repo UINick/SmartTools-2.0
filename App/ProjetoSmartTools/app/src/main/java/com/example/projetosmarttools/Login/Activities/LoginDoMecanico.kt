@@ -44,26 +44,32 @@ class LoginDoMecanico : AppCompatActivity() {
     }
 
     fun entrar(v:View) {
-        val newLoginRequest = LoginMecanicoVO(
-            tiEmailLogin.editText?.text.toString(),
-            tiSenhaLogin.editText?.text.toString()
-        )
-        val request = LoginMecanico.efetuar().post(newLoginRequest)
-        request.enqueue(object : retrofit2.Callback<Void> {
 
-            override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                if (response.code() == 200) {
-                    Toast.makeText(baseContext, "Logado", Toast.LENGTH_SHORT).show()
-                } else {
-                    Toast.makeText(baseContext, "CODE: ${response.code()}", Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            override fun onFailure(call: Call<Void>, t: Throwable) {
-                println("ERRO AQUI: ${t.message}")
-                Toast.makeText(baseContext, "Erro: ${t.stackTrace}", Toast.LENGTH_SHORT).show()
-            }
-
-        })
     }
+
+//    fun entrar(v:View) {
+//        val newLoginRequest = LoginMecanicoVO(
+//            tiEmailLogin.editText?.text.toString(),
+//            tiSenhaLogin.editText?.text.toString()
+//        )
+//        val request = LoginMecanico.efetuar().post(newLoginRequest)
+//        request.enqueue(object : retrofit2.Callback<Void> {
+//
+//            override fun onResponse(call: Call<Void>, response: Response<Void>) {
+//                if (response.code() == 200) {
+//                    Toast.makeText(baseContext, "Logado", Toast.LENGTH_SHORT).show()
+//                } else {
+//                    Toast.makeText(baseContext, "CODE: ${response.code()}", Toast.LENGTH_SHORT).show()
+//                    //to do
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<Void>, t: Throwable) {
+//                println("ERRO AQUI: ${t.message}")
+//                Toast.makeText(baseContext, "Erro: ${t.stackTrace}", Toast.LENGTH_SHORT).show()
+//                //to do
+//            }
+//
+//        })
+//    }
 }
