@@ -5,20 +5,20 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.projetosmarttools.ActionBottomSheetBtn
+import com.example.projetosmarttools.BottomSheetErrorFragment
 import com.example.projetosmarttools.Cadastro.Activities.CadastroOficina
+import com.example.projetosmarttools.ItemBottomSheetClick
 import com.example.projetosmarttools.Login.Service.LoginMecanico
 import com.example.projetosmarttools.Login.Service.LoginMecanicoVO
 import com.example.projetosmarttools.R
 import com.example.projetosmarttools.Service.ApiClient
-import com.example.projetosmarttools.Service.LoginRequest
-import com.example.projetosmarttools.Service.LoginResponse
 import com.example.projetosmarttools.Service.SessionManager
 import com.google.android.material.textfield.TextInputLayout
 import retrofit2.Call
 import retrofit2.Response
-import javax.security.auth.callback.Callback
 
-class LoginDoMecanico : AppCompatActivity() {
+class LoginDoMecanico : AppCompatActivity(), ItemBottomSheetClick{
 
     private lateinit var sessionManager: SessionManager
     private lateinit var apiClient: ApiClient
@@ -44,32 +44,30 @@ class LoginDoMecanico : AppCompatActivity() {
     }
 
     fun entrar(v:View) {
+        val openModal = BottomSheetErrorFragment()
+        val newLoginRequest = LoginMecanicoVO(
+            tiEmailLogin.editText?.text.toString(),
+            tiSenhaLogin.editText?.text.toString()
+        )
+        val request = LoginMecanico.efetuar().post(newLoginRequest)
+        request.enqueue(object : retrofit2.Callback<Void> {
 
+            override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                if (response.code() == 200) {
+                    Toast.makeText(baseContext, "Logado", Toast.LENGTH_SHORT).show()
+                } else {
+                    openModal.show(supportFragmentManager, ActionBottomSheetBtn.TAG)
+                }
+            }
+
+            override fun onFailure(call: Call<Void>, t: Throwable) {
+                println("ERRO AQUI: ${t.message}")
+                openModal.show(supportFragmentManager, ActionBottomSheetBtn.TAG)
+            }
+
+        })
     }
 
-//    fun entrar(v:View) {
-//        val newLoginRequest = LoginMecanicoVO(
-//            tiEmailLogin.editText?.text.toString(),
-//            tiSenhaLogin.editText?.text.toString()
-//        )
-//        val request = LoginMecanico.efetuar().post(newLoginRequest)
-//        request.enqueue(object : retrofit2.Callback<Void> {
-//
-//            override fun onResponse(call: Call<Void>, response: Response<Void>) {
-//                if (response.code() == 200) {
-//                    Toast.makeText(baseContext, "Logado", Toast.LENGTH_SHORT).show()
-//                } else {
-//                    Toast.makeText(baseContext, "CODE: ${response.code()}", Toast.LENGTH_SHORT).show()
-//                    //to do
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<Void>, t: Throwable) {
-//                println("ERRO AQUI: ${t.message}")
-//                Toast.makeText(baseContext, "Erro: ${t.stackTrace}", Toast.LENGTH_SHORT).show()
-//                //to do
-//            }
-//
-//        })
-//    }
+    override fun onItemClick(item: String?) {
+    }
 }
