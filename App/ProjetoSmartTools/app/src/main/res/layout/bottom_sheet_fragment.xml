@@ -14,15 +14,11 @@
         android:textSize="30sp"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_top"
-        android:layout_margin="20dp"/>
-
-    <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_bottom"
-        android:layout_margin="20dp"/>
+        android:layout_margin="20dp"
+        android:background="@drawable/botao_cliente"
+        />
 
 </LinearLayout>

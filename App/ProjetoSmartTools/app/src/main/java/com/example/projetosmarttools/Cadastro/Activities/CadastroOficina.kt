@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.example.projetosmarttools.Cadastro.Service.Oficina.CadastroOficina
 import com.example.projetosmarttools.Cadastro.Service.Oficina.CadastroOficina.Companion.criar
 import com.example.projetosmarttools.Cadastro.Service.Oficina.CadastroOficinaVO
+import com.example.projetosmarttools.Login.Activities.LoginDoMecanico
 import com.example.projetosmarttools.R
 import com.example.projetosmarttools.Service.ApiClient
 
@@ -70,7 +71,7 @@ class CadastroOficina : AppCompatActivity() {
             }
 
         })
-        val confirmPassword = Intent(this, CadastroPassword:: class.java)
+        val confirmPassword = Intent(this, LoginDoMecanico:: class.java)
         startActivity(confirmPassword)
     }
 }

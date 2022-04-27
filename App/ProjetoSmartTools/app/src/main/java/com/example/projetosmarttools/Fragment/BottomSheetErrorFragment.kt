@@ -30,7 +30,6 @@ class BottomSheetErrorFragment: BottomSheetDialogFragment(), View.OnClickListene
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         btn_bottom.setOnClickListener(this)
-        btn_top.setOnClickListener(this)
         btn_bottom.setText(btnTitleModal)
         tv_title.setText(titleModal)
     }
