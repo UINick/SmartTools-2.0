@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.projetosmarttools.BottomSheetErrorFragment
 import com.example.projetosmarttools.Cadastro.Service.Oficina.CadastroOficina
 import com.example.projetosmarttools.Cadastro.Service.Oficina.CadastroOficina.Companion.criar
 import com.example.projetosmarttools.Cadastro.Service.Oficina.CadastroOficinaVO
@@ -52,26 +53,24 @@ class CadastroOficina : AppCompatActivity() {
             tiCnpj.editText?.text.toString(),
             tiTelefone.editText?.text.toString(),
         )
-
+        val openModal = BottomSheetErrorFragment()
         val postOficina = CadastroOficina.criar().post(novaOficina)
+        val confirmPassword = Intent(this, LoginDoMecanico:: class.java)
 
         postOficina.enqueue(object : Callback<Void> {
 
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if (response.code() == 201) {
-                    Toast.makeText(baseContext, "Criado", Toast.LENGTH_SHORT).show()
+                    startActivity(confirmPassword)
                 } else {
-                    Toast.makeText(baseContext, "Erro na API", Toast.LENGTH_SHORT).show()
+                    openModal.setUp(supportFragmentManager, title = "Não cadastrado", btnTitle = "Okay")
                 }
             }
 
             override fun onFailure(call: Call<Void>, t: Throwable) {
-                println("ERRO AQUI: ${t.message}")
-                Toast.makeText(baseContext, "Erro: ${t.stackTrace}", Toast.LENGTH_SHORT).show()
+                openModal.setUp(supportFragmentManager, title = "Erro na API", btnTitle = "Okay")
             }
 
         })
-        val confirmPassword = Intent(this, LoginDoMecanico:: class.java)
-        startActivity(confirmPassword)
     }
 }

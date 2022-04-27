@@ -54,7 +54,7 @@ class LoginDoMecanico : AppCompatActivity(), ItemBottomSheetClick{
 
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if (response.code() == 200) {
-                    Toast.makeText(baseContext, "Logado", Toast.LENGTH_SHORT).show()
+                    openModal.setUp(supportFragmentManager, title = "Logado com sucesso", btnTitle = "Okay")
                 } else {
                     openModal.setUp(supportFragmentManager, title = "Você não possui cadastro ainda", btnTitle = "Ok, entendi")
                 }

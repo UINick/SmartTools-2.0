@@ -18,6 +18,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_bottom"
         android:layout_margin="20dp"
+        android:textColor="@color/white"
         android:background="@drawable/botao_cliente"
         />
 
