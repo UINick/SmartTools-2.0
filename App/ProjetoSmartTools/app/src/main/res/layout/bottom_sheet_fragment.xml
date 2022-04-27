@@ -6,25 +6,23 @@
     android:gravity="center">
 
     <TextView
+        android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:gravity="center"
-        android:text="This is the title"
         android:textSize="30sp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_top"
-        android:text="botao1"
         android:layout_margin="20dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_bottom"
-        android:text="botao2"
         android:layout_margin="20dp"/>
 
 </LinearLayout>

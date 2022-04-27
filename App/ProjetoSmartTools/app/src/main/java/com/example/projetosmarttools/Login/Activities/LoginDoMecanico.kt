@@ -56,13 +56,13 @@ class LoginDoMecanico : AppCompatActivity(), ItemBottomSheetClick{
                 if (response.code() == 200) {
                     Toast.makeText(baseContext, "Logado", Toast.LENGTH_SHORT).show()
                 } else {
-                    openModal.show(supportFragmentManager, ActionBottomSheetBtn.TAG)
+                    openModal.setUp(supportFragmentManager, title = "Você não possui cadastro ainda", btnTitle = "Ok, entendi")
                 }
             }
 
             override fun onFailure(call: Call<Void>, t: Throwable) {
                 println("ERRO AQUI: ${t.message}")
-                openModal.show(supportFragmentManager, ActionBottomSheetBtn.TAG)
+                openModal.setUp(supportFragmentManager, title = "Erro na conexão, tente novamente mais tarde.", btnTitle = "Ok, entendi")
             }
 
         })

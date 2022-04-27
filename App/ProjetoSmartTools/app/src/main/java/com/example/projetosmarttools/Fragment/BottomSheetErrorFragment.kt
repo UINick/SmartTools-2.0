@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.FragmentManager
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.bottom_sheet_fragment.*
 import java.lang.RuntimeException
@@ -13,6 +14,9 @@ import java.lang.RuntimeException
 class BottomSheetErrorFragment: BottomSheetDialogFragment(), View.OnClickListener {
 
     private var mListener:ItemBottomSheetClick? = null
+    private var titleModal: String = ""
+    private var btnTitleModal: String = ""
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,6 +31,8 @@ class BottomSheetErrorFragment: BottomSheetDialogFragment(), View.OnClickListene
         super.onViewCreated(view, savedInstanceState)
         btn_bottom.setOnClickListener(this)
         btn_top.setOnClickListener(this)
+        btn_bottom.setText(btnTitleModal)
+        tv_title.setText(titleModal)
     }
 
     override fun onAttach(context: Context) {
@@ -50,6 +56,12 @@ class BottomSheetErrorFragment: BottomSheetDialogFragment(), View.OnClickListene
         val btnSelected = p0 as Button
         mListener!!.onItemClick(btnSelected.text.toString())
         dismiss()
+    }
+
+    fun setUp(fragment: FragmentManager, title: String, btnTitle: String) {
+        show(fragment, ActionBottomSheetBtn.TAG)
+        btnTitleModal = btnTitle
+        titleModal = title
     }
 
 }
