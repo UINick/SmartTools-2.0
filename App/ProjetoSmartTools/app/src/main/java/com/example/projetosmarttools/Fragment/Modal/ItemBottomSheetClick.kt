@@ -1,4 +1,4 @@
-package com.example.projetosmarttools
+package com.example.projetosmarttools.Fragment.Modal
 
 interface ItemBottomSheetClick {
 

@@ -4,11 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import com.example.projetosmarttools.BottomSheetErrorFragment
+import com.example.projetosmarttools.Fragment.Modal.BottomSheetErrorFragment
 import com.example.projetosmarttools.Cadastro.Service.Oficina.CadastroOficina
-import com.example.projetosmarttools.Cadastro.Service.Oficina.CadastroOficina.Companion.criar
 import com.example.projetosmarttools.Cadastro.Service.Oficina.CadastroOficinaVO
+import com.example.projetosmarttools.Fragment.Loading.LoadingScreen
 import com.example.projetosmarttools.Login.Activities.LoginDoMecanico
 import com.example.projetosmarttools.R
 import com.example.projetosmarttools.Service.ApiClient
@@ -46,6 +45,8 @@ class CadastroOficina : AppCompatActivity() {
 
     fun goToConfirmPassword(v:View) {
 
+        LoadingScreen.displayLoadingWithText(this, "", false)
+
         val novaOficina = CadastroOficinaVO(
             tiNome.editText?.text.toString(),
             tiEmail.editText?.text.toString(),
@@ -55,19 +56,21 @@ class CadastroOficina : AppCompatActivity() {
         )
         val openModal = BottomSheetErrorFragment()
         val postOficina = CadastroOficina.criar().post(novaOficina)
-        val confirmPassword = Intent(this, LoginDoMecanico:: class.java)
 
         postOficina.enqueue(object : Callback<Void> {
 
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if (response.code() == 201) {
-                    startActivity(confirmPassword)
+                    LoadingScreen.hideLoading()
+                    finish()
                 } else {
+                    LoadingScreen.hideLoading()
                     openModal.setUp(supportFragmentManager, title = "Não cadastrado", btnTitle = "Okay")
                 }
             }
 
             override fun onFailure(call: Call<Void>, t: Throwable) {
+                LoadingScreen.hideLoading()
                 openModal.setUp(supportFragmentManager, title = "Erro na API", btnTitle = "Okay")
             }
 

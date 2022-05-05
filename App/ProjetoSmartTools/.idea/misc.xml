@@ -39,6 +39,7 @@
         <entry key="app/src/main/res/layout/activity_mecanico_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/bottom_sheet_fragment.xml" value="0.2171875" />
         <entry key="app/src/main/res/layout/bottomsheet_fragment.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/loading_screen.xml" value="0.1859375" />
       </map>
     </option>
   </component>

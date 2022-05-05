@@ -1,4 +1,4 @@
-package com.example.projetosmarttools
+package com.example.projetosmarttools.Fragment.Modal
 
 import android.content.Context
 import android.os.Bundle
@@ -7,13 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.FragmentManager
+import com.example.projetosmarttools.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.bottom_sheet_fragment.*
 import java.lang.RuntimeException
 
 class BottomSheetErrorFragment: BottomSheetDialogFragment(), View.OnClickListener {
 
-    private var mListener:ItemBottomSheetClick? = null
+    private var mListener: ItemBottomSheetClick? = null
     private var titleModal: String = ""
     private var btnTitleModal: String = ""
 
