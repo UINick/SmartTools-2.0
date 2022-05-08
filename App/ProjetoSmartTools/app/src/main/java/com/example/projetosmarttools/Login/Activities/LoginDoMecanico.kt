@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.example.projetosmarttools.Fragment.Modal.BottomSheetErrorFragment
 import com.example.projetosmarttools.Cadastro.Activities.CadastroOficina
+import com.example.projetosmarttools.DashBoard
 import com.example.projetosmarttools.Fragment.Modal.ItemBottomSheetClick
 import com.example.projetosmarttools.Login.Service.LoginMecanico
 import com.example.projetosmarttools.Login.Service.LoginMecanicoVO
@@ -46,6 +47,7 @@ class LoginDoMecanico : AppCompatActivity(), ItemBottomSheetClick {
 
         LoadingScreen.displayLoadingWithText(this, "", false)
 
+        val intent = Intent(this, DashBoard::class.java)
         val openModal = BottomSheetErrorFragment()
         val newLoginRequest = LoginMecanicoVO(
             tiEmailLogin.editText?.text.toString(),
@@ -57,7 +59,7 @@ class LoginDoMecanico : AppCompatActivity(), ItemBottomSheetClick {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if (response.code() == 200) {
                     LoadingScreen.hideLoading()
-                    openModal.setUp(supportFragmentManager, title = "Logado com sucesso", btnTitle = "Okay")
+                    startActivity(intent)
                 } else {
                     LoadingScreen.hideLoading()
                     openModal.setUp(supportFragmentManager, title = "Você não possui cadastro ainda", btnTitle = "Ok, entendi")

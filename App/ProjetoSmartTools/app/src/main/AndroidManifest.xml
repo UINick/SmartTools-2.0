@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".DashBoard"
+            android:exported="false" />
+        <activity
             android:name=".Cadastro.Activities.CadastroPassword"
             android:exported="false" />
         <activity
