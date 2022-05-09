@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.androidplot.pie.Segment
 import com.androidplot.pie.SegmentFormatter
+import com.example.projetosmarttools.Fragment.Dash.FragmentTransacoes
 
 class DashBoard : AppCompatActivity() {
 
@@ -16,14 +17,19 @@ class DashBoard : AppCompatActivity() {
 
         pie = findViewById(R.id.pieChart)
 
-        val entrada = Segment("", 1500)
-        val saida = Segment("", 1500)
+        val entrada = Segment("50%", 1500)
+        val saida = Segment("50%", 1500)
 
         val entradaCor = SegmentFormatter(Color.parseColor("#107C41"))
         val saidaCor = SegmentFormatter(Color.parseColor("#C60000"))
 
         pie.addSegment(entrada, entradaCor)
         pie.addSegment(saida, saidaCor)
+
+        val transaction =  supportFragmentManager.beginTransaction()
+        val argument1 = Bundle()
+        transaction.replace(R.id.fragment_details, FragmentTransacoes::class.java, null)
+        transaction.commit()
     }
 
 
