@@ -31,19 +31,11 @@ class DashBoard : AppCompatActivity() {
         pie.addSegment(entrada, entradaCor)
         pie.addSegment(saida, saidaCor)
 
-        repeat(6) {
-            val fragmento = FragmentContainerView(this)
-            fragmento.id = View.generateViewId()
-            findViewById<LinearLayout>(R.id.fragment_details).addView(fragmento)
-            val transaction = supportFragmentManager.beginTransaction()
-            transaction.add(fragmento.id, FragmentTransacoes::class.java, null)
-            transaction.commit()
-        }
 
-//        val transaction =  supportFragmentManager.beginTransaction()
-//        val argument1 = Bundle()
-//        transaction.replace(R.id.fragment_details, FragmentTransacoes::class.java, null)
-//        transaction.commit()
+        val transaction =  supportFragmentManager.beginTransaction()
+        val argument1 = Bundle()
+        transaction.replace(R.id.fragment_details, FragmentTransacoes::class.java, null)
+        transaction.commit()
 
     }
 

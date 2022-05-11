@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f2f5e7"
     tools:context=".DashBoard">
 
     <LinearLayout
@@ -203,7 +204,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="300dp"
                         android:orientation="vertical">
 
                         <TextView
@@ -225,9 +226,8 @@
                             app:titleTextSize="30sp"
                             android:id="@+id/pieChart" />
 
-
                     </LinearLayout>
-
+<!--                    teste-->
                 </LinearLayout>
 
             </ScrollView>
