@@ -11,30 +11,17 @@ import com.androidplot.pie.Segment
 import com.androidplot.pie.SegmentFormatter
 import com.androidplot.pie.SegmentRegistry
 import com.example.projetosmarttools.Fragment.Dash.FragmentTransacoes
+import com.example.projetosmarttools.Fragment.TabBarNavigation.DashBoardFragment
 
 class DashBoard : AppCompatActivity() {
-
-    lateinit var pie: com.androidplot.pie.PieChart
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dash_board)
 
-        pie = findViewById(R.id.pieChart)
-
-        val entrada = Segment("50%", 1500)
-        val saida = Segment("50%", 1500)
-
-        val entradaCor = SegmentFormatter(Color.parseColor("#107C41"))
-        val saidaCor = SegmentFormatter(Color.parseColor("#C60000"))
-
-        pie.addSegment(entrada, entradaCor)
-        pie.addSegment(saida, saidaCor)
-
-
         val transaction =  supportFragmentManager.beginTransaction()
         val argument1 = Bundle()
-        transaction.replace(R.id.fragment_details, FragmentTransacoes::class.java, null)
+        transaction.replace(R.id.fragDash, DashBoardFragment::class.java, null)
         transaction.commit()
 
     }
