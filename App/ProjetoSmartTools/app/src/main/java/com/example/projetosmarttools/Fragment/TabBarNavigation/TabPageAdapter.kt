@@ -9,17 +9,14 @@ import com.example.projetosmarttools.*
 class TabPageAdapter (activity: FragmentActivity, private val tabCount: Int) : FragmentStateAdapter(activity){
     override fun getItemCount(): Int = tabCount
 
-
-
-    override fun createFragment(position: Int): Activity {
+    override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> Cliente()
-            1 -> Extrato()
-            2 -> DashBoard()
-            3 -> Servicos()
-            4 -> Ajustes()
-
-            else -> DashBoard()
+            0 -> ClienteFragment()
+            1 -> ExtratoFragment()
+            2 -> DashBoardFragment()
+            3 -> ServicosFragment()
+            4 -> AjustesFragment()
+            else -> DashBoardFragment()
         }
     }
 

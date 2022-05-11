@@ -186,27 +186,24 @@
             android:orientation="vertical">
 
             <ScrollView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#f2f5e7"
-                    android:layout_gravity="center">
+                    android:orientation="vertical"
+                    android:background="#f2f5e7">
 
-                    <androidx.fragment.app.FragmentContainerView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/fragment_details"
-                        >
-
-                    </androidx.fragment.app.FragmentContainerView>
-
+                        <androidx.fragment.app.FragmentContainerView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/fragment_details"
+                            />
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="300dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:orientation="vertical">
 
                         <TextView
@@ -224,9 +221,13 @@
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
                             style="@style/APDefacto.Light"
+                            app:backgroundColor="#f2f5e7"
+                            app:titleTextSize="30sp"
                             android:id="@+id/pieChart" />
 
+
                     </LinearLayout>
+
                 </LinearLayout>
 
             </ScrollView>
