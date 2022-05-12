@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../../../layout/custom_preview.xml" value="0.215625" />
         <entry key="..\:/Users/bruna.martins.b.melo/Downloads/App/ProjetoSmartTools/app/src/main/res/layout/activity_home.xml" value="0.22" />
         <entry key="..\:/Users/bruna.martins.b.melo/Downloads/App/ProjetoSmartTools/app/src/main/res/layout/activity_splash.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/bruna.martins.b.melo/Downloads/ProjetoSmartTools/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.13703703703703704" />
@@ -49,7 +50,7 @@
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.24322916666666666" />
         <entry key="app/src/main/res/layout/activity_login_do_mecanico.xml" value="0.2171875" />
         <entry key="app/src/main/res/layout/activity_login_mecanico.xml" value="0.24322916666666666" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.21614583333333334" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_mecanico_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_servicos.xml" value="0.21614583333333334" />
         <entry key="app/src/main/res/layout/bottom_sheet_fragment.xml" value="0.2171875" />
