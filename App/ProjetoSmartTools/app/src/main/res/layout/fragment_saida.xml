@@ -28,7 +28,7 @@
                     android:layout_height="wrap_content"
                     android:text="Saída"
                     android:fontFamily="@font/poppins_bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:layout_marginTop="30dp"
                     android:layout_marginLeft="120dp"
                     android:textSize="24sp"
@@ -122,7 +122,7 @@
                     android:layout_marginRight="60dp"
                     android:text="Cadastrar"
                     android:onClick="goToConfirmPassword"
-                    android:background="@drawable/botao_cliente">
+                    android:background="@drawable/botao_mecanico">
                 </Button>
             </LinearLayout>
 

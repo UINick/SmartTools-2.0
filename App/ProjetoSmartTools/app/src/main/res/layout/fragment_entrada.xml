@@ -37,7 +37,7 @@
                     android:layout_height="wrap_content"
                     android:text="Entrada"
                     android:fontFamily="@font/poppins_bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:layout_marginTop="30dp"
                     android:layout_marginLeft="120dp"
 
@@ -70,6 +70,7 @@
                     android:layout_marginRight="27dp"
                     android:tooltipText="Digite sua categoria"
                     android:id="@+id/ti_categoria">
+
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
@@ -133,7 +134,7 @@
                     android:layout_marginRight="60dp"
                     android:text="Cadastrar"
                     android:onClick="goToConfirmPassword"
-                    android:background="@drawable/botao_cliente">
+                    android:background="@drawable/botao_mecanico">
                 </Button>
             </LinearLayout>
 

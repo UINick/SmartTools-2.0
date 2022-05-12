@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:text="Cadastro de Veículos"
                 android:fontFamily="@font/poppins_bold"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="33dp"
                 android:textSize="24sp"
@@ -121,7 +121,7 @@
                 android:layout_marginRight="60dp"
                 android:text="Continuar"
                 android:onClick="goToConfirmPassword"
-                android:background="@drawable/botao_cliente">
+                android:background="@drawable/botao_mecanico">
             </Button>
         </LinearLayout>
 
