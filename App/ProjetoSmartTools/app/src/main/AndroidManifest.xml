@@ -13,6 +13,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".CadastroCliente.CadastroDoCliente"
+            android:exported="false" />
+        <activity
+            android:name=".CadastroVeiculo.Veiculo"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.ClienteCadastro"
+            android:exported="false"
+            android:label="@string/title_activity_cliente_cadastro" />
+        <activity
+            android:name=".ui.login.CadastroCliente"
+            android:exported="false"
+            android:label="@string/title_activity_cadastro_cliente" />
+        <activity
+            android:name=".CadastroExtrato.Saida"
+            android:exported="false" />
+        <activity
+            android:name=".CadastroExtrato.Entrada"
+            android:exported="false" />
+        <activity
             android:name=".Ajustes"
             android:exported="false" />
         <activity
