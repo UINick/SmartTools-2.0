@@ -28,10 +28,10 @@ class DashBoardFragment : Fragment() {
 //        pieChart.addSegment(saida, saidaCor)
 
 
-        val transaction = childFragmentManager.beginTransaction()
-        val argument1 = Bundle()
-        transaction.replace(R.id.fragment_details, FragmentTransacoes::class.java, null)
-        transaction.commit()
+//        val transaction = childFragmentManager.beginTransaction()
+//        val argument1 = Bundle()
+//        transaction.replace(R.id.fragment_details, FragmentTransacoes::class.java, null)
+//        transaction.commit()
 
     }
 }
