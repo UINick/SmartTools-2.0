@@ -47,11 +47,13 @@
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.24322916666666666" />
         <entry key="app/src/main/res/layout/activity_login_do_mecanico.xml" value="0.2171875" />
         <entry key="app/src/main/res/layout/activity_login_mecanico.xml" value="0.24322916666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.21614583333333334" />
         <entry key="app/src/main/res/layout/activity_mecanico_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/bottom_sheet_fragment.xml" value="0.2171875" />
         <entry key="app/src/main/res/layout/bottomsheet_fragment.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_dash_board.xml" value="0.19635416666666666" />
         <entry key="app/src/main/res/layout/fragment_menu_bar.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_tab_bar.xml" value="0.21614583333333334" />
         <entry key="app/src/main/res/layout/fragment_transacoes.xml" value="0.14270833333333333" />
         <entry key="app/src/main/res/layout/loading_screen.xml" value="0.1859375" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1859375" />
