@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Projeto Smart Tools</string>
+    <string name="nome_oficina">Nome da oficina</string>
+    <string name="alterar_perfil">Alterar perfil</string>
+    <string name="limpar_extrato">Limpar extrato</string>
+    <string name="definir_limite_de_vagas">Definir limite de vagas</string>
+    <string name="sair_do_aplicativo">Sair do aplicativo</string>
 </resources>
