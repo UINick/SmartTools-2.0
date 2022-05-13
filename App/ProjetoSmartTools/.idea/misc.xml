@@ -12,6 +12,7 @@
         <entry key="..\:/Users/bruna.martins.b.melo/Downloads/App SmartTools/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_home.xml" value="0.17604166666666668" />
         <entry key="..\:/Users/bruna.martins.b.melo/Downloads/App SmartTools/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="..\:/Users/bruna.martins.b.melo/Downloads/App SmartTools/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/bottom_sheet_fragment.xml" value="0.1" />
+        <entry key="../../../../../../../layout/custom_preview.xml" value="0.215625" />
         <entry key="..\:/Users/bruna.martins.b.melo/Downloads/App/ProjetoSmartTools/app/src/main/res/layout/activity_home.xml" value="0.22" />
         <entry key="..\:/Users/bruna.martins.b.melo/Downloads/App/ProjetoSmartTools/app/src/main/res/layout/activity_splash.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/bruna.martins.b.melo/Downloads/ProjetoSmartTools/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.13703703703703704" />
@@ -35,20 +36,45 @@
         <entry key="..\:/Users/vinic/OneDrive/Documentos/4o semestre/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_cadastro_senha.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/vinic/OneDrive/Documentos/4o semestre/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="..\:/Users/vinic/OneDrive/Documentos/4o semestre/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_login_do_mecanico.xml" value="0.1" />
+        <entry key="..\:/Users/vinic/OneDrive/Documentos/Pesquisa e Inovacao 4o semestre/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_ajustes.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/vinic/OneDrive/Documentos/Pesquisa e Inovacao 4o semestre/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_extrato.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/vinic/OneDrive/Documentos/Pesquisa e Inovacao 4o semestre/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_servicos.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/vinic/OneDrive/Documentos/Pesquisa e Inovacao 4o semestre/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/fragment_dashboard.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/vinic/OneDrive/Documentos/Pesquisa e Inovacao 4o semestre/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/fragment_tab_bar.xml" value="0.35" />
         <entry key="app/src/main/res/drawable/background_gradiente.xml" value="0.259375" />
         <entry key="app/src/main/res/drawable/botao_cliente.xml" value="0.259375" />
         <entry key="app/src/main/res/drawable/botao_mecanico.xml" value="0.259375" />
+        <entry key="app/src/main/res/drawable/pilula_dash.xml" value="0.26927083333333335" />
+        <entry key="app/src/main/res/drawable/view_redonda_2c3333.xml" value="0.26927083333333335" />
+        <entry key="app/src/main/res/drawable/view_redonda_f2f5e7.xml" value="0.26927083333333335" />
+        <entry key="app/src/main/res/drawable/view_redonda_verde.xml" value="0.26927083333333335" />
+        <entry key="app/src/main/res/drawable/view_redonda_vermelho.xml" value="0.26927083333333335" />
         <entry key="app/src/main/res/drawable/view_with_corner_radius.xml" value="0.2375" />
+        <entry key="app/src/main/res/layout/activity_ajustes.xml" value="0.21614583333333334" />
         <entry key="app/src/main/res/layout/activity_cadastro_oficina.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_cadastro_password.xml" value="0.2171875" />
         <entry key="app/src/main/res/layout/activity_cadastro_senha.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_dash_board.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_extrato.xml" value="0.21614583333333334" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.24322916666666666" />
         <entry key="app/src/main/res/layout/activity_login_do_mecanico.xml" value="0.2171875" />
         <entry key="app/src/main/res/layout/activity_login_mecanico.xml" value="0.24322916666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_mecanico_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_servicos.xml" value="0.21614583333333334" />
         <entry key="app/src/main/res/layout/bottom_sheet_fragment.xml" value="0.2171875" />
         <entry key="app/src/main/res/layout/bottomsheet_fragment.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_ajustes.xml" value="0.21614583333333334" />
+        <entry key="app/src/main/res/layout/fragment_cliente.xml" value="0.21614583333333334" />
+        <entry key="app/src/main/res/layout/fragment_dash.xml" value="0.2140625" />
+        <entry key="app/src/main/res/layout/fragment_dash_board.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_extrato.xml" value="0.21614583333333334" />
+        <entry key="app/src/main/res/layout/fragment_menu_bar.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_servicos.xml" value="0.21614583333333334" />
+        <entry key="app/src/main/res/layout/fragment_tab_bar.xml" value="0.21614583333333334" />
+        <entry key="app/src/main/res/layout/fragment_transacoes.xml" value="0.14270833333333333" />
         <entry key="app/src/main/res/layout/loading_screen.xml" value="0.1859375" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1859375" />
       </map>
     </option>
   </component>

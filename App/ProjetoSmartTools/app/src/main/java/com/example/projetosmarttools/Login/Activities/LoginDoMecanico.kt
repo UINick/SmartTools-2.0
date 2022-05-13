@@ -14,6 +14,7 @@ import com.example.projetosmarttools.Service.ApiClient
 import com.example.projetosmarttools.Service.SessionManager
 import com.google.android.material.textfield.TextInputLayout
 import com.example.projetosmarttools.Fragment.Loading.LoadingScreen
+import com.example.projetosmarttools.Main
 import retrofit2.Call
 import retrofit2.Response
 
@@ -46,6 +47,7 @@ class LoginDoMecanico : AppCompatActivity(), ItemBottomSheetClick {
 
         LoadingScreen.displayLoadingWithText(this, "", false)
 
+        val intent = Intent(this, Main::class.java)
         val openModal = BottomSheetErrorFragment()
         val newLoginRequest = LoginMecanicoVO(
             tiEmailLogin.editText?.text.toString(),
@@ -57,7 +59,7 @@ class LoginDoMecanico : AppCompatActivity(), ItemBottomSheetClick {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if (response.code() == 200) {
                     LoadingScreen.hideLoading()
-                    openModal.setUp(supportFragmentManager, title = "Logado com sucesso", btnTitle = "Okay")
+                    startActivity(intent)
                 } else {
                     LoadingScreen.hideLoading()
                     openModal.setUp(supportFragmentManager, title = "Você não possui cadastro ainda", btnTitle = "Ok, entendi")
