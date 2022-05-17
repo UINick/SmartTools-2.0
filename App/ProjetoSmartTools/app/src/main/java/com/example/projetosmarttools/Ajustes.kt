@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.projetosmarttools.Fragment.Loading.LoadingScreen.dialog
-import kotlinx.android.synthetic.main.activity_ajustes.*
+import kotlinx.android.synthetic.main.fragment_ajustes.*
 import kotlinx.android.synthetic.main.loading_screen.*
 import java.util.stream.DoubleStream.builder
 
@@ -17,7 +17,7 @@ class Ajustes : AppCompatActivity() {
     private val REQUEST_IMAGE_GALLERY = 132
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ajustes)
+        setContentView(R.layout.fragment_ajustes)
 
         displaypicture.setOnClickListener {
             val builder = AlertDialog.Builder(this)
