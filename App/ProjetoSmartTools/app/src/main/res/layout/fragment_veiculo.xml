@@ -134,7 +134,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
-                android:text="Continuar"
+                android:text="Confirmar cadastro"
                 android:onClick="goToConfirmPassword"
                 android:background="@drawable/botao_mecanico">
             </Button>

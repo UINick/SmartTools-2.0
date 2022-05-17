@@ -12,4 +12,19 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_cliente_cadastro">ClienteCadastro</string>
+
+    <string-array name="categoria_entrada">
+        <item>Manutenção</item>
+        <item>Troca de óleo</item>
+        <item>Funilaria</item>
+        <item>Peças</item>
+        <item>Pinturas</item>
+    </string-array>
+
+    <string-array name="categoria_saida">
+        <item>Funcionario</item>
+        <item>Contas</item>
+        <item>Peças</item>
+        <item>Outros</item>
+    </string-array>
 </resources>
