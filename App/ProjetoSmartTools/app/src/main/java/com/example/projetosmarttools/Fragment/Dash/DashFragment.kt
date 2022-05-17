@@ -6,31 +6,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import androidx.fragment.app.FragmentContainerView
 import com.androidplot.pie.PieChart
 import com.androidplot.pie.Segment
 import com.androidplot.pie.SegmentFormatter
 import com.example.projetosmarttools.R
-import kotlinx.android.synthetic.main.fragment_dash.*
-
-import androidx.recyclerview.widget.RecyclerView
-
-
 
 
 class DashFragment : Fragment() {
 
     lateinit var pie:PieChart
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val v : View = inflater.inflate(R.layout.fragment_dash, container, false)
-        pie = v.findViewById(R.id.pieChart)
+        pie = view.findViewById(R.id.pieChart)
 
         val entrada = Segment("50%", 1500)
         val saida = Segment("50%", 1500)
@@ -41,13 +32,24 @@ class DashFragment : Fragment() {
         pie.addSegment(entrada, entradaCor)
         pie.addSegment(saida, saidaCor)
 
+        val transaction = activity?.supportFragmentManager!!.beginTransaction()
 
-        val transaction = childFragmentManager.beginTransaction()
-        val argument1 = Bundle()
-        transaction.replace(R.id.fragment_details, FragmentTransacoes::class.java, null)
+        view.findViewById<LinearLayout>(R.id.linear_details).removeAllViews()
+
+        repeat(6) {
+            val fragmento = FragmentContainerView(view.context)
+            fragmento.id = View.generateViewId()
+            view.findViewById<LinearLayout>(R.id.linear_details).addView(fragmento)
+            transaction.add(fragmento.id, FragmentTransacoes::class.java, null)
+        }
         transaction.commit()
 
-        return v
-//        return inflater.inflate(R.layout.fragment_dash, container, false)
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_dash, container, false)
     }
 }
