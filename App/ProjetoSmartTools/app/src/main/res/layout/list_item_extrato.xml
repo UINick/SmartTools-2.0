@@ -22,7 +22,7 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
-                    android:layout_width="70dp"
+                    android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:id="@+id/view_lateral"
                     android:orientation="horizontal"
@@ -91,7 +91,7 @@
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_arrow_direita"
                         android:layout_gravity="center"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginStart="45dp"
                         app:tint="@color/black" />
 
                 </LinearLayout>
