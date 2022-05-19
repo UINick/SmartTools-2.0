@@ -3,6 +3,7 @@ package com.example.projetosmarttools.Fragment.TabBarNavigation
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.projetosmarttools.Fragment.Cliente.ClienteFragment
 import com.example.projetosmarttools.Fragment.Dash.DashFragment
 import com.example.projetosmarttools.Fragment.Extrato.ExtratoFragment
 
