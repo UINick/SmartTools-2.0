@@ -28,9 +28,9 @@ class ExtratoAdapter(private val extratoList: ArrayList<ExtratoVO>):
         holder.answer1.setText(currentItem.answer1)
         holder.answer2.setText(currentItem.answer2)
         if (currentItem.isNegative) {
-            holder.viewLateral.setBackgroundColor(Color.parseColor("#CF2C2C"))
+            holder.viewLateral.setBackgroundResource(R.drawable.view_redonda_vermelho)
         } else {
-            holder.viewLateral.setBackgroundColor(Color.parseColor("#107C41"))
+            holder.viewLateral.setBackgroundResource(R.drawable.view_redonda_verde)
         }
     }
 
