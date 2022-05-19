@@ -41,7 +41,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="27dp"
                 android:tooltipText="Digite seu nome"
-                android:id="@+id/ti_nome_cliente">
+                android:id="@+id/ti_cliente">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
