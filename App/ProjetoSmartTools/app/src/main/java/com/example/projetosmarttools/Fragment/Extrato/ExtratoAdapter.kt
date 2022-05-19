@@ -23,10 +23,10 @@ class ExtratoAdapter(private val extratoList: ArrayList<ExtratoVO>):
     override fun onBindViewHolder(holder: ViewExtratoHolder, position: Int) {
 
         val currentItem = extratoList[position]
-        holder.title1.setText(currentItem.title1)
-        holder.title2.setText(currentItem.title2)
-        holder.answer1.setText(currentItem.answer1)
-        holder.answer2.setText(currentItem.answer2)
+
+        holder.valor.setText(currentItem.title1)
+        holder.data.setText(currentItem.title2)
+
         if (currentItem.isNegative) {
             holder.viewLateral.setBackgroundResource(R.drawable.view_redonda_vermelho)
         } else {
@@ -40,11 +40,8 @@ class ExtratoAdapter(private val extratoList: ArrayList<ExtratoVO>):
     }
 
     class ViewExtratoHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-
-        val title1: TextView = itemView.findViewById(R.id.lblFirst)
-        val title2: TextView = itemView.findViewById(R.id.lblSecond)
-        val answer1: TextView = itemView.findViewById(R.id.txtFirst)
-        val answer2: TextView = itemView.findViewById(R.id.txtSecond)
+        val data: TextView = itemView.findViewById(R.id.lblSecond)
+        val valor: TextView = itemView.findViewById(R.id.txtSecond)
         val viewLateral: LinearLayout = itemView.findViewById(R.id.view_lateral)
     }
 }

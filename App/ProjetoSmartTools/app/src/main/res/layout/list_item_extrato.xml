@@ -54,7 +54,7 @@
                             android:layout_marginTop="15dp"
                             android:textSize="20sp"
                             android:id="@+id/lblFirst"
-                            android:text="Teste 1"/>
+                            android:text="Data"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
                             android:layout_marginTop="20dp"
                             android:textSize="20sp"
                             android:id="@+id/txtFirst"
-                            android:text="Teste 1"/>
+                            android:text="Valor"/>
 
                     </LinearLayout>
 
