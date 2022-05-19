@@ -1,5 +1,8 @@
 package com.example.projetosmarttools.Fragment.Extrato
 
+import android.content.Context
+import android.graphics.Color
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,9 +27,15 @@ class ExtratoAdapter(private val extratoList: ArrayList<ExtratoVO>):
         holder.title2.setText(currentItem.title2)
         holder.answer1.setText(currentItem.answer1)
         holder.answer2.setText(currentItem.answer2)
+        if (currentItem.isNegative) {
+            holder.viewLateral.setBackgroundColor(Color.parseColor("#CF2C2C"))
+        } else {
+            holder.viewLateral.setBackgroundColor(Color.parseColor("#107C41"))
+        }
     }
 
     override fun getItemCount(): Int {
+        print("THE SIZE OF THE ARRAY IS ========= ${extratoList.size}")
         return  extratoList.size
     }
 
@@ -36,5 +45,6 @@ class ExtratoAdapter(private val extratoList: ArrayList<ExtratoVO>):
         val title2: TextView = itemView.findViewById(R.id.lblSecond)
         val answer1: TextView = itemView.findViewById(R.id.txtFirst)
         val answer2: TextView = itemView.findViewById(R.id.txtSecond)
+        val viewLateral: LinearLayout = itemView.findViewById(R.id.view_lateral)
     }
 }
