@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetosmarttools.R
@@ -12,6 +13,7 @@ import com.example.projetosmarttools.R
 class ExtratoFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
+    private lateinit var llCadastrar: LinearLayout
     private lateinit var newArrayList: ArrayList<ExtratoVO>
 
     private lateinit var arrTitle1: Array<String>
@@ -35,6 +37,8 @@ class ExtratoFragment : Fragment() {
         arrTitle2 = arrayOf(extrato1.title2, extrato2.title2, extrato3.title2, extrato4.title2,extrato5.title2,extrato6.title2, extrato7.title2,extrato8.title2)
         arrIsNegative = arrayOf(extrato1.isNegative, extrato2.isNegative, extrato3.isNegative,extrato4.isNegative, extrato5.isNegative, extrato6.isNegative, extrato7.isNegative, extrato8.isNegative)
 
+        llCadastrar = view.findViewById(R.id.ll_cadastrar)
+
         recyclerView = view.findViewById(R.id.recycler_id)
         recyclerView.layoutManager = LinearLayoutManager(activity?.baseContext)
         recyclerView.setHasFixedSize(true)
@@ -45,9 +49,14 @@ class ExtratoFragment : Fragment() {
     }
 
     private fun getUserData() {
-        for (i in arrTitle1.indices) {
-            val extrato = ExtratoVO(arrTitle1[i], arrTitle2[i], arrIsNegative[i])
-            newArrayList.add(extrato)
+        if (!newArrayList.isNotEmpty()) {
+            for (i in arrTitle1.indices) {
+                val extrato = ExtratoVO(arrTitle1[i], arrTitle2[i], arrIsNegative[i])
+                newArrayList.add(extrato)
+            }
+        } else {
+            recyclerView.visibility = View.GONE
+            llCadastrar.visibility = View.VISIBLE
         }
 
         recyclerView.adapter = ExtratoAdapter(newArrayList)

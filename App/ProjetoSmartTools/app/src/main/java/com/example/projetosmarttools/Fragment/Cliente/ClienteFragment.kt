@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetosmarttools.Fragment.Extrato.ExtratoAdapter
@@ -15,6 +16,7 @@ class ClienteFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var newArrayList: ArrayList<ClienteVO>
+    private lateinit var llCadastrar: LinearLayout
 
     private lateinit var arrNome: Array<String>
     private lateinit var arrTelefone: Array<String>
@@ -31,6 +33,8 @@ class ClienteFragment : Fragment() {
         arrNome = arrayOf(cliente1.nome, cliente2.nome, cliente3.nome, cliente4.nome, cliente5.nome)
         arrTelefone = arrayOf(cliente1.telefone, cliente2.telefone, cliente3.telefone, cliente4.telefone, cliente5.telefone)
 
+        llCadastrar = view.findViewById(R.id.ll_cadastrar)
+
         recyclerView = view.findViewById(R.id.recycler_cliente_id)
         recyclerView.layoutManager = LinearLayoutManager(activity?.baseContext)
         recyclerView.setHasFixedSize(true)
@@ -42,10 +46,16 @@ class ClienteFragment : Fragment() {
     }
 
     private fun getUserData() {
-        for (i in arrNome.indices) {
-            val cliente = ClienteVO(arrNome[i], arrTelefone[i])
-            newArrayList.add(cliente)
+        if (!newArrayList.isNotEmpty()) {
+            for (i in arrNome.indices) {
+                val cliente = ClienteVO(arrNome[i], arrTelefone[i])
+                newArrayList.add(cliente)
+            }
+        } else {
+            recyclerView.visibility = View.GONE
+            llCadastrar.visibility = View.VISIBLE
         }
+
 
         recyclerView.adapter = ClienteAdapter(newArrayList)
     }
