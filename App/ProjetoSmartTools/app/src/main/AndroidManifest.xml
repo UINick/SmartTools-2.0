@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".Cadastro.Activities.CadastroClienteLogin"
+            android:exported="false" />
+        <activity
             android:name=".CadastroCliente.CadastroDoCliente"
             android:exported="false" />
         <activity
