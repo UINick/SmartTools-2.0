@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:text="Cadastro de Oficinas"
                 android:fontFamily="@font/poppins_bold"
-                android:textColor="@color/black"
+                android:textColor="#2C3333"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="33dp"
                 android:textSize="24sp"
