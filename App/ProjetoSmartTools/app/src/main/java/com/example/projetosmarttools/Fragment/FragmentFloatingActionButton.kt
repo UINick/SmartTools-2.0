@@ -79,16 +79,23 @@ class FragmentFloatingActionButton : Fragment() {
 
      fun setAnimation(clicked:Boolean) {
         if (!clicked){
+            val fromBottom: Animation by lazy { AnimationUtils.loadAnimation(
+                view?.context,
+                R.anim.to_bottom_anim
+            ) }
             add_money.startAnimation(fromBottom)
             exit_money.startAnimation(fromBottom)
             add_car.startAnimation(fromBottom)
             add_user.startAnimation(fromBottom)
+            val rotateOpen = null
             add.startAnimation(rotateOpen)
         }else{
+            val toBottom = null
             add_money.startAnimation(toBottom)
             exit_money.startAnimation(toBottom)
             add_car.startAnimation(toBottom)
             add_user.startAnimation(toBottom)
+            val rotateClose = null
             add.startAnimation(rotateClose)
         }
     }
