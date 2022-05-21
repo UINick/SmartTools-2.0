@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.FragmentFloatingActionButton">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="336dp"
+        android:layout_marginTop="528dp"
+        android:backgroundTint="#468181"
+        android:clickable="true"
+        android:contentDescription="@string/add"
+        android:focusable="true"
+        android:src="@drawable/ic_add"
+        android:tint="#F5F2E7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="50dp"
+        app:rippleColor="#F5F2E7"
+        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#2C3333"
+        android:clickable="true"
+        android:contentDescription="@string/addmoney"
+        android:focusable="true"
+        android:src="@drawable/ic_money"
+        android:tint="#26FF00"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintEnd_toEndOf="@+id/add"
+        app:maxImageSize="50dp"
+        app:rippleColor="#F5F2E7"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:visibility="invisible"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/exit_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#2C3333"
+        android:clickable="true"
+        android:contentDescription="@string/exitmoney"
+        android:focusable="true"
+        android:src="@drawable/ic_money"
+        android:tint="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/add_money"
+        app:layout_constraintEnd_toEndOf="@+id/add_money"
+        app:maxImageSize="50dp"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:visibility="invisible"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#2C3333"
+        android:clickable="true"
+        android:contentDescription="@string/addcar"
+        android:focusable="true"
+        android:src="@drawable/ic_baseline_servicos"
+        android:tint="#F5F2E7"
+        app:layout_constraintBottom_toTopOf="@+id/exit_money"
+        app:layout_constraintEnd_toEndOf="@+id/exit_money"
+        app:maxImageSize="50dp"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:visibility="invisible"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#2C3333"
+        android:clickable="true"
+        android:contentDescription="@string/adduser"
+        android:focusable="true"
+        android:src="@drawable/ic_user_add"
+        android:tint="#F5F2E7"
+        app:layout_constraintBottom_toTopOf="@+id/add_car"
+        app:layout_constraintEnd_toEndOf="@+id/add_car"
+        app:maxImageSize="50dp"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:visibility="invisible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

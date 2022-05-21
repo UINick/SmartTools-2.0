@@ -13,49 +13,49 @@ tools:context=".Fragment.TabBarNavigation.TabBarFragment">
     android:layout_height="match_parent"
     android:layout_above="@+id/tabLayout"/>
 
-<com.google.android.material.tabs.TabLayout
-    android:id="@+id/tabLayout"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    android:background="#2C3333"
-    app:tabGravity="fill"
-    app:tabIndicatorColor="#2C3333"
-    app:tabMaxWidth="0dp"
-    app:tabMode="fixed">
-
-    <com.google.android.material.tabs.TabItem
-        android:layout_width="wrap_content"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:icon="@drawable/ic_baseline_person"
-        android:text="Cliente" />
+        android:layout_alignParentBottom="true"
+        android:background="#2C3333"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="#2C3333"
+        app:tabMaxWidth="0dp"
+        app:tabMode="fixed">
 
-    <com.google.android.material.tabs.TabItem
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:icon="@drawable/ic_baseline_list"
-        android:text="Extrato" />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_person"
+            android:text="Cliente" />
 
-    <com.google.android.material.tabs.TabItem
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:icon="@drawable/ic_baseline_pie_chart"
-        android:text="Gráfico" />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_list"
+            android:text="Extrato" />
 
-    <com.google.android.material.tabs.TabItem
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:icon="@drawable/ic_baseline_servicos"
-        android:text="Serviços" />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_pie_chart"
+            android:text="Gráfico" />
 
-    <com.google.android.material.tabs.TabItem
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:icon="@drawable/ic_baseline_settings"
-        android:text="Ajustes" />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_servicos"
+            android:text="Serviços" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_settings"
+            android:text="Ajustes" />
 
 
-</com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.tabs.TabLayout>
 
 
 </RelativeLayout>

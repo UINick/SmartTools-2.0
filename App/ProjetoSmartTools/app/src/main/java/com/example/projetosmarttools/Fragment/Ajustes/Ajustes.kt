@@ -1,4 +1,4 @@
-package com.example.projetosmarttools
+package com.example.projetosmarttools.Fragment.Ajustes
 
 import android.content.DialogInterface
 import android.content.Intent
@@ -7,7 +7,9 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.Fragment
 import com.example.projetosmarttools.Fragment.Loading.LoadingScreen.dialog
+import com.example.projetosmarttools.R
 import kotlinx.android.synthetic.main.fragment_ajustes.*
 import kotlinx.android.synthetic.main.loading_screen.*
 import java.util.stream.DoubleStream.builder

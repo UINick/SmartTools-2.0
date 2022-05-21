@@ -14,6 +14,14 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/tabLayout" />
 
+    <fragment
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.example.projetosmarttools.Fragment.FragmentFloatingActionButton"
+        tools:layout="@layout/fragment_floating_action_button">
+    </fragment>
+
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
