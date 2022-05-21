@@ -47,8 +47,11 @@
         <entry key="app/src/main/res/drawable/pilula_dash.xml" value="0.26927083333333335" />
         <entry key="app/src/main/res/drawable/view_redonda_2c3333.xml" value="0.26927083333333335" />
         <entry key="app/src/main/res/drawable/view_redonda_cor_background.xml" value="0.19895833333333332" />
+        <entry key="app/src/main/res/drawable/view_redonda_em_andamento.xml" value="0.234375" />
         <entry key="app/src/main/res/drawable/view_redonda_f2f5e7.xml" value="0.26927083333333335" />
+        <entry key="app/src/main/res/drawable/view_redonda_finalizado.xml" value="0.234375" />
         <entry key="app/src/main/res/drawable/view_redonda_lateral.xml" value="0.19895833333333332" />
+        <entry key="app/src/main/res/drawable/view_redonda_nao_iniciado.xml" value="0.234375" />
         <entry key="app/src/main/res/drawable/view_redonda_verde.xml" value="0.26927083333333335" />
         <entry key="app/src/main/res/drawable/view_redonda_vermelho.xml" value="0.26927083333333335" />
         <entry key="app/src/main/res/drawable/view_with_corner_radius.xml" value="0.2375" />
@@ -61,7 +64,7 @@
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.24322916666666666" />
         <entry key="app/src/main/res/layout/activity_login_do_mecanico.xml" value="0.2171875" />
         <entry key="app/src/main/res/layout/activity_login_mecanico.xml" value="0.24322916666666666" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_mecanico_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_servicos.xml" value="0.21614583333333334" />
         <entry key="app/src/main/res/layout/bottom_sheet_fragment.xml" value="0.2171875" />
@@ -77,6 +80,7 @@
         <entry key="app/src/main/res/layout/fragment_transacoes.xml" value="0.14270833333333333" />
         <entry key="app/src/main/res/layout/list_item_cliente.xml" value="0.2140625" />
         <entry key="app/src/main/res/layout/list_item_extrato.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/list_item_servico.xml" value="0.2140625" />
         <entry key="app/src/main/res/layout/loading_screen.xml" value="0.1859375" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1859375" />
       </map>

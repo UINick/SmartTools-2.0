@@ -6,6 +6,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.projetosmarttools.Fragment.Cliente.ClienteFragment
 import com.example.projetosmarttools.Fragment.Dash.DashFragment
 import com.example.projetosmarttools.Fragment.Extrato.ExtratoFragment
+import com.example.projetosmarttools.Fragment.Servicos.ServicosFragment
 
 class TabPageAdapter (activity: FragmentActivity, private val tabCount: Int) : FragmentStateAdapter(activity){
     override fun getItemCount(): Int = tabCount
