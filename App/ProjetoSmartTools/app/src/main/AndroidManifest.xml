@@ -39,40 +39,16 @@
             android:name=".Ajustes"
             android:exported="false" />
         <activity
-            android:name=".Servicos"
-            android:exported="false" />
-        <activity
-            android:name=".Cliente"
-            android:exported="false" />
-        <activity
-            android:name=".Extrato"
-            android:exported="false" />
-        <activity
-            android:name=".DashBoard"
+            android:name=".Main"
             android:exported="false" />
         <activity
             android:name=".Cadastro.Activities.CadastroPassword"
             android:exported="false" />
         <activity
-            android:name=".CadastroSenha"
-            android:exported="false" />
-        <activity
             android:name=".Cadastro.Activities.CadastroOficina"
             android:exported="false" />
         <activity
-            android:name=".cadastro_senha"
-            android:exported="false" />
-        <activity
-            android:name=".cadastro_oficina"
-            android:exported="false" />
-        <activity
             android:name=".Login.Activities.LoginDoMecanico"
-            android:exported="false" />
-        <activity
-            android:name=".LoginMecanico"
-            android:exported="false" />
-        <activity
-            android:name=".MecanicoLogin"
             android:exported="false" />
         <activity
             android:name=".Onboarding.HomeActivity"

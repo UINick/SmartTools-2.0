@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import com.example.projetosmarttools.Fragment.Modal.BottomSheetErrorFragment
 import com.example.projetosmarttools.Cadastro.Activities.CadastroOficina
-import com.example.projetosmarttools.DashBoard
 import com.example.projetosmarttools.Fragment.Modal.ItemBottomSheetClick
 import com.example.projetosmarttools.Login.Service.LoginMecanico
 import com.example.projetosmarttools.Login.Service.LoginMecanicoVO
@@ -15,6 +14,7 @@ import com.example.projetosmarttools.Service.ApiClient
 import com.example.projetosmarttools.Service.SessionManager
 import com.google.android.material.textfield.TextInputLayout
 import com.example.projetosmarttools.Fragment.Loading.LoadingScreen
+import com.example.projetosmarttools.Main
 import retrofit2.Call
 import retrofit2.Response
 
@@ -47,7 +47,7 @@ class LoginDoMecanico : AppCompatActivity(), ItemBottomSheetClick {
 
         LoadingScreen.displayLoadingWithText(this, "", false)
 
-        val intent = Intent(this, DashBoard::class.java)
+        val intent = Intent(this, Main::class.java)
         val openModal = BottomSheetErrorFragment()
         val newLoginRequest = LoginMecanicoVO(
             tiEmailLogin.editText?.text.toString(),

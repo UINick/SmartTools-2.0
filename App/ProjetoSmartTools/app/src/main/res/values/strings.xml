@@ -13,6 +13,13 @@
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_cliente_cadastro">ClienteCadastro</string>
 
+    <string name="nome_oficina">Nome da oficina:</string>
+    <string name="sair_do_aplicativo">Sair do aplicativo</string>
+    <string name="telefone">Telefone:</string>
+    <string name="endereco">Endereço:</string>
+    <string name="cnpj">CNPJ:</string>
+    <string name="email">Email:</string>
+
     <string-array name="categoria_entrada">
         <item>Manutenção</item>
         <item>Troca de óleo</item>
