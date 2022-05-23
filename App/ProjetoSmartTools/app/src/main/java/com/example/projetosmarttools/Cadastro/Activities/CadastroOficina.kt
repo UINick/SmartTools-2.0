@@ -48,13 +48,13 @@ class CadastroOficina : AppCompatActivity() {
         LoadingScreen.displayLoadingWithText(this, "", false)
 
         val novaOficina = CadastroOficinaVO(
-            tiNome.editText?.text.toString(),
-            tiEmail.editText?.text.toString(),
-            tiSenha.editText?.text.toString(),
             tiCnpj.editText?.text.toString(),
-            tiTelefone.editText?.text.toString(),
+            tiEmail.editText?.text.toString(),
+            tiNome.editText?.text.toString(),
+            tiSenha.editText?.text.toString(),
+            tiTelefone.editText?.text.toString()
         )
-        val openModal = BottomSheetErrorFragment()
+
         val postOficina = CadastroOficina.criar().post(novaOficina)
 
         postOficina.enqueue(object : Callback<Void> {
@@ -65,13 +65,16 @@ class CadastroOficina : AppCompatActivity() {
                     finish()
                 } else {
                     LoadingScreen.hideLoading()
-                    openModal.setUp(supportFragmentManager, title = "Não cadastrado", btnTitle = "Okay")
                 }
             }
 
             override fun onFailure(call: Call<Void>, t: Throwable) {
+                println("ESSE E O ERRO =========> ${t.message}")
+                println("ESSE E O ERRO =========> ${t.stackTrace}")
+                println("ESSE E O ERRO =========> ${t.localizedMessage}")
+                println("ESSE E O ERRO =========> ${t.cause}")
+                println("ESSE E O ERRO =========> ${t.suppressed}")
                 LoadingScreen.hideLoading()
-                openModal.setUp(supportFragmentManager, title = "Erro na API", btnTitle = "Okay")
             }
 
         })
