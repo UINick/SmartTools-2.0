@@ -1,6 +1,7 @@
 package com.example.projetosmarttools.Login.Activities
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -21,6 +22,7 @@ import retrofit2.Response
 class LoginDoMecanico : AppCompatActivity(), ItemBottomSheetClick {
 
     private lateinit var sessionManager: SessionManager
+    private lateinit var preferencias: SharedPreferences
     private lateinit var apiClient: ApiClient
 
     lateinit var tiEmailLogin: TextInputLayout
@@ -29,6 +31,8 @@ class LoginDoMecanico : AppCompatActivity(), ItemBottomSheetClick {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_do_mecanico)
+
+        preferencias = getSharedPreferences("token", MODE_PRIVATE)
 
         tiEmailLogin = findViewById(R.id.ti_email_l)
         tiSenhaLogin = findViewById(R.id.ti_senha_l)

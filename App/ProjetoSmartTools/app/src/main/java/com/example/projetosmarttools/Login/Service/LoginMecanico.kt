@@ -13,7 +13,9 @@ interface LoginMecanico {
     fun post(@Body loginRequest: LoginMecanicoVO): Call<Void>
 
     companion object {
-        var BASE_URL = "https://apirest-smarttools.herokuapp.com/"
+
+        var BASE_URL = "https://apinewsmarttools.herokuapp.com/"
+
         fun efetuar(): LoginMecanico {
             val retrofit = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
