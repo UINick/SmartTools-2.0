@@ -38,8 +38,9 @@ class ClienteFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         sessionManager = SessionManager(requireActivity().baseContext)
-
         println("Teste do session ${sessionManager.fetchAuthToken()}")
+
+        newArrayList = arrayListOf<ClienteVO>()
 
         val request = ClienteService.getAllClients()
         request.fetchClients(token = "Bearer ${sessionManager.fetchAuthToken()}")
@@ -47,6 +48,10 @@ class ClienteFragment : Fragment() {
 
                 override fun onResponse(call: Call<List<ClienteVO>>, response: Response<List<ClienteVO>>) {
                     if (response.code() == 200) {
+                        response.body()?.forEach { cliente ->
+                            newArrayList.add(cliente)
+                        }
+                        getUserData()
                         Toast.makeText(activity?.baseContext, "Deu certo =)", Toast.LENGTH_SHORT).show()
                     } else {
                         Toast.makeText(activity?.baseContext, "Tenta dnv pfv", Toast.LENGTH_SHORT).show()
@@ -69,24 +74,13 @@ class ClienteFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(activity?.baseContext)
         recyclerView.setHasFixedSize(true)
 
-        newArrayList = arrayListOf<ClienteVO>()
-
-        getUserData()
-
     }
 
     private fun getUserData() {
-//        if (!newArrayList.isNotEmpty()) {
-//            for (i in arrNome.indices) {
-//                val cliente = ClienteVO(arrNome[i], arrTelefone[i])
-//                newArrayList.add(cliente)
-//            }
-//        } else {
-//            recyclerView.visibility = View.GONE
-//            llCadastrar.visibility = View.VISIBLE
-//        }
-
-
+        if (newArrayList.isEmpty()) {
+            recyclerView.visibility = View.GONE
+            llCadastrar.visibility = View.VISIBLE
+        }
         recyclerView.adapter = ClienteAdapter(newArrayList)
     }
 
