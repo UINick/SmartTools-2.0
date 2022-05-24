@@ -1,7 +1,7 @@
 package com.example.projetosmarttools.CadastroExtrato
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,18 +9,19 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import com.example.projetosmarttools.R
 
-class SaidaFragment : Fragment() {
-
-
-    override fun onCreateView(
+class SaidaExtrato : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_saida_extrato)
+    }
+    fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_saida, container, false)
+        return inflater.inflate(R.layout.fragment_entrada, container, false)
     }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        onViewCreated(view, savedInstanceState)
         val spinner: Spinner = view.findViewById(R.id.sp_categoria_saida)
         ArrayAdapter.createFromResource(
             view.context,
@@ -31,6 +32,4 @@ class SaidaFragment : Fragment() {
             spinner.adapter = adapter
         }
     }
-
-
 }

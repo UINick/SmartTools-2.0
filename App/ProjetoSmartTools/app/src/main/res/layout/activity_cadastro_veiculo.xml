@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F2E7"
-    tools:context=".CadastroCliente.CadastroDoClienteFragment">
+    tools:context=".CadastroVeiculo.CadastroVeiculo">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,9 +14,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="370dp"
+            android:layout_height="450dp"
             android:orientation="vertical"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="90dp"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="112dp"
             android:layout_marginLeft="40dp"
@@ -26,48 +27,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cadastro de Clientes"
+                android:text="Cadastro de Veículos"
                 android:fontFamily="@font/poppins_bold"
                 android:textColor="@color/white"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="33dp"
                 android:textSize="24sp"
                 />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="27dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="27dp"
-                android:tooltipText="Digite seu nome"
-                android:id="@+id/ti_cliente">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="Nome do Cliente"
-                    android:inputType="text">
-                </com.google.android.material.textfield.TextInputEditText>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="27dp"
-                android:layout_marginTop="17dp"
-                android:layout_marginRight="27dp"
-                android:tooltipText="Digite seu Telefone"
-                android:id="@+id/ti_telefone">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="Telefone"
-                    android:inputType="number">
-
-                </com.google.android.material.textfield.TextInputEditText>
-            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -86,6 +52,23 @@
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginRight="27dp"
+                android:tooltipText="Digite o nome do cliente"
+                android:id="@+id/ti_nome_cliente">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Nome do Cliente"
+                    android:inputType="text">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -93,18 +76,51 @@
                 android:layout_marginLeft="27dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="27dp"
-                android:tooltipText="Digite seu email"
+                android:tooltipText="Digite sua placa"
+                android:id="@+id/ti_placa">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Placa"
+                    android:inputType="text">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="27dp"
+                android:tooltipText="Digite a montadora"
                 android:id="@+id/ti_montadora">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress">
+                    android:hint="Montadora"
+                    android:inputType="text">
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="27dp"
+                android:tooltipText="Digite o modelo"
+                android:id="@+id/ti_modelo">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Modelo"
+                    android:inputType="text">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
 
@@ -119,7 +135,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
-                android:text="Confirmar Cadastro"
+                android:text="Confirmar cadastro"
                 android:onClick="goToConfirmPassword"
                 android:background="@drawable/botao_mecanico">
             </Button>
@@ -127,6 +143,4 @@
 
     </LinearLayout>
 
-
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
