@@ -39,16 +39,26 @@ class ClienteFragment : Fragment() {
 
         sessionManager = SessionManager(requireActivity().baseContext)
 
+        println("Teste do session ${sessionManager.fetchAuthToken()}")
+
         val request = ClienteService.getAllClients()
         request.fetchClients(token = "Bearer ${sessionManager.fetchAuthToken()}")
-            .enqueue(object : Callback<ClienteVO>{
+            .enqueue(object : Callback<List<ClienteVO>>{
 
-                override fun onResponse(call: Call<ClienteVO>, response: Response<ClienteVO>) {
-                    Toast.makeText(activity?.baseContext, "Deu certo =)", Toast.LENGTH_SHORT).show()
+                override fun onResponse(call: Call<List<ClienteVO>>, response: Response<List<ClienteVO>>) {
+                    if (response.code() == 200) {
+                        Toast.makeText(activity?.baseContext, "Deu certo =)", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(activity?.baseContext, "Tenta dnv pfv", Toast.LENGTH_SHORT).show()
+                    }
                 }
 
-                override fun onFailure(call: Call<ClienteVO>, t: Throwable) {
-                    Toast.makeText(activity?.baseContext, "Deu certo =)", Toast.LENGTH_SHORT).show()
+                override fun onFailure(call: Call<List<ClienteVO>>, t: Throwable) {
+                    println("ESSE É O ERRO DO CLIENTE =====> ${t.message}")
+                    println("ESSE É O ERRO DO CLIENTE =====> ${t.cause}")
+                    println("ESSE É O ERRO DO CLIENTE =====> ${t.localizedMessage}")
+                    println("ESSE É O ERRO DO CLIENTE =====> ${t.stackTrace}")
+                    Toast.makeText(activity?.baseContext, "Deu erro =(", Toast.LENGTH_SHORT).show()
                 }
 
             })

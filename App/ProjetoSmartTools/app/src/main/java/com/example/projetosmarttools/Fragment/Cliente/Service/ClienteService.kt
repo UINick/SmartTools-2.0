@@ -12,7 +12,7 @@ import retrofit2.http.Header
 interface ClienteService {
 
     @GET("clientes")
-    fun fetchClients(@Header("Authorization") token: String): Call<ClienteVO>
+    fun fetchClients(@Header("Authorization") token: String): Call<List<ClienteVO>>
 
     companion object {
         var BASE_URL = "https://apinewsmarttools.herokuapp.com/"

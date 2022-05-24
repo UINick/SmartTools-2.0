@@ -1,33 +1,26 @@
 package com.example.projetosmarttools.Login.Activities
 
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
 import com.example.projetosmarttools.Fragment.Modal.BottomSheetErrorFragment
 import com.example.projetosmarttools.Cadastro.Activities.CadastroOficina
 import com.example.projetosmarttools.Fragment.Modal.ItemBottomSheetClick
 import com.example.projetosmarttools.Login.Service.LoginMecanico
 import com.example.projetosmarttools.Login.Service.LoginMecanicoVO
 import com.example.projetosmarttools.R
-import com.example.projetosmarttools.Service.ApiClient
 import com.example.projetosmarttools.Service.SessionManager
 import com.google.android.material.textfield.TextInputLayout
 import com.example.projetosmarttools.Fragment.Loading.LoadingScreen
 import com.example.projetosmarttools.Login.Service.LogingResponse
 import com.example.projetosmarttools.Main
-import com.example.projetosmarttools.Service.LoginRequest
 import retrofit2.Call
-import retrofit2.Callback
 import retrofit2.Response
 
 class LoginDoMecanico : AppCompatActivity(), ItemBottomSheetClick {
 
     private lateinit var sessionManager: SessionManager
-    private lateinit var preferencias: SharedPreferences
-    private lateinit var apiClient: ApiClient
 
     lateinit var tiEmailLogin: TextInputLayout
     lateinit var tiSenhaLogin: TextInputLayout
