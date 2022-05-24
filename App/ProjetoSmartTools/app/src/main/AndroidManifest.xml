@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".CadastroCliente.DetalheCliente"
+            android:exported="false" />
+        <activity
+            android:name=".CadastroExtrato.DetalheExtrato"
+            android:exported="false" />
+        <activity
             android:name=".CadastroCliente.CadastroDoCliente"
             android:exported="false" />
         <activity
