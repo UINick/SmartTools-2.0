@@ -1,21 +1,34 @@
 package com.example.projetosmarttools.Fragment.Cliente
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projetosmarttools.Fragment.Cliente.Service.ClienteService
 import com.example.projetosmarttools.Fragment.Extrato.ExtratoAdapter
 import com.example.projetosmarttools.Fragment.Extrato.ExtratoVO
+import com.example.projetosmarttools.Fragment.Loading.LoadingScreen
+import com.example.projetosmarttools.Login.Service.LoginMecanico
+import com.example.projetosmarttools.Login.Service.LogingResponse
 import com.example.projetosmarttools.R
+import com.example.projetosmarttools.Service.SessionManager
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class ClienteFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var newArrayList: ArrayList<ClienteVO>
+    private lateinit var sessionManager: SessionManager
+
     private lateinit var llCadastrar: LinearLayout
 
     private lateinit var arrNome: Array<String>
@@ -24,18 +37,25 @@ class ClienteFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val cliente1 = ClienteVO("Pedro", "(11) 97404-5922")
-        val cliente2 = ClienteVO("Bruna", "(11) 96041-6628")
-        val cliente3 = ClienteVO("Lucas", "(11) 96071-5268")
-        val cliente4 = ClienteVO("Vinicius", "(11) 99607-9686")
-        val cliente5 = ClienteVO("Nicholas", "(11) 95419-9312")
+        sessionManager = SessionManager(requireActivity().baseContext)
 
-        arrNome = arrayOf(cliente1.nome, cliente2.nome, cliente3.nome, cliente4.nome, cliente5.nome)
-        arrTelefone = arrayOf(cliente1.telefone, cliente2.telefone, cliente3.telefone, cliente4.telefone, cliente5.telefone)
+        val request = ClienteService.getAllClients()
+        request.fetchClients(token = "Bearer ${sessionManager.fetchAuthToken()}")
+            .enqueue(object : Callback<ClienteVO>{
+
+                override fun onResponse(call: Call<ClienteVO>, response: Response<ClienteVO>) {
+                    Toast.makeText(activity?.baseContext, "Deu certo =)", Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onFailure(call: Call<ClienteVO>, t: Throwable) {
+                    Toast.makeText(activity?.baseContext, "Deu certo =)", Toast.LENGTH_SHORT).show()
+                }
+
+            })
 
         llCadastrar = view.findViewById(R.id.ll_cadastrar)
-
         recyclerView = view.findViewById(R.id.recycler_cliente_id)
+
         recyclerView.layoutManager = LinearLayoutManager(activity?.baseContext)
         recyclerView.setHasFixedSize(true)
 
@@ -46,15 +66,15 @@ class ClienteFragment : Fragment() {
     }
 
     private fun getUserData() {
-        if (!newArrayList.isNotEmpty()) {
-            for (i in arrNome.indices) {
-                val cliente = ClienteVO(arrNome[i], arrTelefone[i])
-                newArrayList.add(cliente)
-            }
-        } else {
-            recyclerView.visibility = View.GONE
-            llCadastrar.visibility = View.VISIBLE
-        }
+//        if (!newArrayList.isNotEmpty()) {
+//            for (i in arrNome.indices) {
+//                val cliente = ClienteVO(arrNome[i], arrTelefone[i])
+//                newArrayList.add(cliente)
+//            }
+//        } else {
+//            recyclerView.visibility = View.GONE
+//            llCadastrar.visibility = View.VISIBLE
+//        }
 
 
         recyclerView.adapter = ClienteAdapter(newArrayList)
