@@ -32,6 +32,7 @@ class ClienteFragment : Fragment() {
     private lateinit var newArrayList: ArrayList<ClienteVO>
     private lateinit var sessionManager: SessionManager
     private lateinit var btnCadastrarCliente: Button
+    private lateinit var btnCadastrarFixo: Button
 
     private lateinit var llCadastrar: LinearLayout
 
@@ -43,11 +44,17 @@ class ClienteFragment : Fragment() {
 
         newArrayList = arrayListOf<ClienteVO>()
 
+        btnCadastrarFixo = view.findViewById(R.id.btn_cadastrar_fixo)
         llCadastrar = view.findViewById(R.id.ll_cadastrar)
         recyclerView = view.findViewById(R.id.recycler_cliente_id)
         btnCadastrarCliente = view.findViewById(R.id.btn_CadastrarCliente)
 
         btnCadastrarCliente.setOnClickListener {
+            val cadastrarCliente = Intent(view.context, CadastroDoCliente::class.java)
+            startActivity(cadastrarCliente)
+        }
+
+        btnCadastrarFixo.setOnClickListener {
             val cadastrarCliente = Intent(view.context, CadastroDoCliente::class.java)
             startActivity(cadastrarCliente)
         }
@@ -72,9 +79,7 @@ class ClienteFragment : Fragment() {
                 override fun onResponse(call: Call<List<ClienteVO>>, response: Response<List<ClienteVO>>) {
                     if (response.code() == 200) {
                         if (newArrayList.size > 0) {
-                            for (i in newArrayList.indices) {
-                                newArrayList.removeAt(i)
-                            }
+                            newArrayList.clear()
                         }
                         response.body()?.forEach { cliente ->
                             newArrayList.add(cliente)
@@ -103,6 +108,7 @@ class ClienteFragment : Fragment() {
     private fun getUserData() {
         if (newArrayList.isEmpty()) {
             recyclerView.visibility = View.GONE
+            btnCadastrarFixo.visibility = View.GONE
             llCadastrar.visibility = View.VISIBLE
         } else {
             recyclerView.adapter = ClienteAdapter(newArrayList)
