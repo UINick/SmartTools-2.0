@@ -24,10 +24,11 @@ class ExtratoAdapter(private val extratoList: ArrayList<ExtratoVO>):
 
         val currentItem = extratoList[position]
 
-        holder.valor.setText(currentItem.title1)
-        holder.data.setText(currentItem.title2)
+        holder.valor.setText(currentItem.valor.toString())
+        holder.data.setText(currentItem.dataRegistro)
 
-        if (currentItem.isNegative) {
+
+        if (currentItem.valor > 0) {
             holder.viewLateral.setBackgroundResource(R.drawable.view_redonda_vermelho)
         } else {
             holder.viewLateral.setBackgroundResource(R.drawable.view_redonda_verde)
@@ -35,7 +36,7 @@ class ExtratoAdapter(private val extratoList: ArrayList<ExtratoVO>):
     }
 
     override fun getItemCount(): Int {
-        print("THE SIZE OF THE ARRAY IS ========= ${extratoList.size}")
+        println("THE SIZE OF THE ARRAY IS ========= ${extratoList.size}")
         return  extratoList.size
     }
 

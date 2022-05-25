@@ -6,39 +6,31 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projetosmarttools.Clientes.ClienteService
+import com.example.projetosmarttools.Clientes.ClienteVO
+import com.example.projetosmarttools.Fragment.Loading.LoadingScreen
 import com.example.projetosmarttools.R
+import com.example.projetosmarttools.SessionManager
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class ExtratoFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var llCadastrar: LinearLayout
+    private lateinit var sessionManager: SessionManager
     private lateinit var newArrayList: ArrayList<ExtratoVO>
-
-    private lateinit var arrTitle1: Array<String>
-    private lateinit var arrTitle2: Array<String>
-    private lateinit var arrAnswer1: Array<String>
-    private lateinit var arrAnswer2: Array<String>
-    private lateinit var arrIsNegative: Array<Boolean>
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val extrato1 = ExtratoVO("10/02/2022", "R$ 60,00",true)
-        val extrato2 = ExtratoVO("01/03/2022", "R$ 530,00",true)
-        val extrato3 = ExtratoVO("05/03/2022", "R$ 60,00",false)
-        val extrato4 = ExtratoVO("03/04/2022", "R$ 80,00",true)
-        val extrato5 = ExtratoVO("01/04/2022", "R$ 90,70",false)
-        val extrato6 = ExtratoVO("01/04/2022", "R$ 780,00",false)
-        val extrato7 = ExtratoVO("03/04/2022", "R$ 51,00",true)
-        val extrato8 = ExtratoVO("06/05/2022", "R$ 60,00",false)
 
-        arrTitle1 = arrayOf(extrato1.title1, extrato2.title1, extrato3.title1,extrato4.title1,extrato5.title1,extrato6.title1, extrato7.title1,extrato8.title1)
-        arrTitle2 = arrayOf(extrato1.title2, extrato2.title2, extrato3.title2, extrato4.title2,extrato5.title2,extrato6.title2, extrato7.title2,extrato8.title2)
-        arrIsNegative = arrayOf(extrato1.isNegative, extrato2.isNegative, extrato3.isNegative,extrato4.isNegative, extrato5.isNegative, extrato6.isNegative, extrato7.isNegative, extrato8.isNegative)
+        sessionManager = SessionManager(requireActivity().baseContext)
 
         llCadastrar = view.findViewById(R.id.ll_cadastrar)
-
         recyclerView = view.findViewById(R.id.recycler_id)
         recyclerView.layoutManager = LinearLayoutManager(activity?.baseContext)
         recyclerView.setHasFixedSize(true)
@@ -48,18 +40,50 @@ class ExtratoFragment : Fragment() {
         getUserData()
     }
 
+    override fun onResume() {
+        super.onResume()
+        callService()
+    }
+
+    private fun callService() {
+        LoadingScreen.displayLoadingWithText(context, "", false)
+
+        val request = ExtratoService.getLancamentos()
+        request.fetchLancamentos(token = "Bearer ${sessionManager.fetchAuthToken()}")
+            .enqueue(object : Callback<List<ExtratoVO>> {
+
+                override fun onResponse(call: Call<List<ExtratoVO>>, response: Response<List<ExtratoVO>>) {
+                    if (response.code() == 200) {
+                        if (newArrayList.size > 0) {
+                            newArrayList.clear()
+                        }
+                        response.body()?.forEach { extrato ->
+                            newArrayList.add(extrato)
+                        }
+                        getUserData()
+                        LoadingScreen.hideLoading()
+                    } else {
+                        LoadingScreen.hideLoading()
+                        getUserData()
+                    }
+                }
+
+                override fun onFailure(call: Call<List<ExtratoVO>>, t: Throwable) {
+                    LoadingScreen.hideLoading()
+                    Toast.makeText(activity?.baseContext, "Deu erro =(", Toast.LENGTH_SHORT).show()
+                }
+
+            })
+
+    }
+
     private fun getUserData() {
-        if (!newArrayList.isNotEmpty()) {
-            for (i in arrTitle1.indices) {
-                val extrato = ExtratoVO(arrTitle1[i], arrTitle2[i], arrIsNegative[i])
-                newArrayList.add(extrato)
-            }
-        } else {
+        if (newArrayList.isEmpty()) {
             recyclerView.visibility = View.GONE
             llCadastrar.visibility = View.VISIBLE
+        } else {
+            recyclerView.adapter = ExtratoAdapter(newArrayList)
         }
-
-        recyclerView.adapter = ExtratoAdapter(newArrayList)
     }
 
     override fun onCreateView(
