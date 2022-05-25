@@ -14,22 +14,4 @@ class EntradaExtrato : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_entrada_extrato)
     }
-    fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_entrada, container, false)
-    }
-    fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        onViewCreated(view, savedInstanceState)
-        val spinner: Spinner = view.findViewById(R.id.sp_categoria_entrada)
-        ArrayAdapter.createFromResource(
-            view.context,
-            R.array.categoria_entrada,
-            android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            spinner.adapter = adapter
-        }
-    }
 }
