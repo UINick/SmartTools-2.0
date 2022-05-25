@@ -9,6 +9,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetosmarttools.Cadastro.Activities.CadastroPassword
+import com.example.projetosmarttools.CadastroCliente.CadastroDoCliente
+import com.example.projetosmarttools.CadastroCliente.DetalheCliente
 import com.example.projetosmarttools.Fragment.Extrato.ExtratoAdapter
 import com.example.projetosmarttools.Fragment.Extrato.ExtratoVO
 import com.example.projetosmarttools.R
@@ -25,9 +27,9 @@ class ClienteAdapter(private val clienteList: ArrayList<ClienteVO>):
 
         init {
             this.cell.setOnClickListener {
-                val cadastroPassword = Intent(it.context, CadastroPassword::class.java)
-                cadastroPassword.putExtra("nome", nome.text.toString())
-                it.context.startActivity(cadastroPassword)
+                val detalheCliente = Intent(it.context, DetalheCliente::class.java)
+                detalheCliente.putExtra("nome", nome.text.toString())
+                it.context.startActivity(detalheCliente)
             }
         }
 

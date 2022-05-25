@@ -56,8 +56,8 @@
                 android:layout_marginTop="80dp"
                 android:layout_gravity="center"
                 android:text="Cadastrar"
-                android:background="@drawable/botao_mecanico"
-                android:onClick="clienteCadatro"/>
+                android:id="@+id/btn_CadastrarCliente"
+                android:background="@drawable/botao_mecanico" />
 
         </LinearLayout>
 

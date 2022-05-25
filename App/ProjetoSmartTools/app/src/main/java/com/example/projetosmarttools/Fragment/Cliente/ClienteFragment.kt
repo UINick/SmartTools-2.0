@@ -1,16 +1,19 @@
 package com.example.projetosmarttools.Fragment.Cliente
 
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projetosmarttools.CadastroCliente.CadastroDoCliente
 import com.example.projetosmarttools.Fragment.Cliente.Service.ClienteService
 import com.example.projetosmarttools.Fragment.Extrato.ExtratoAdapter
 import com.example.projetosmarttools.Fragment.Extrato.ExtratoVO
@@ -28,11 +31,9 @@ class ClienteFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var newArrayList: ArrayList<ClienteVO>
     private lateinit var sessionManager: SessionManager
+    private lateinit var btnCadastrarCliente: Button
 
     private lateinit var llCadastrar: LinearLayout
-
-    private lateinit var arrNome: Array<String>
-    private lateinit var arrTelefone: Array<String>
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -55,9 +56,9 @@ class ClienteFragment : Fragment() {
                         }
                         getUserData()
                         LoadingScreen.hideLoading()
-                        Toast.makeText(activity?.baseContext, "Deu certo =)", Toast.LENGTH_SHORT).show()
                     } else {
                         LoadingScreen.hideLoading()
+                        getUserData()
                         Toast.makeText(activity?.baseContext, "Tenta dnv pfv", Toast.LENGTH_SHORT).show()
                     }
                 }
@@ -75,6 +76,12 @@ class ClienteFragment : Fragment() {
 
         llCadastrar = view.findViewById(R.id.ll_cadastrar)
         recyclerView = view.findViewById(R.id.recycler_cliente_id)
+        btnCadastrarCliente = view.findViewById(R.id.btn_CadastrarCliente)
+
+        btnCadastrarCliente.setOnClickListener {
+            val cadastrarCliente = Intent(view.context, CadastroDoCliente::class.java)
+            startActivity(cadastrarCliente)
+        }
 
         recyclerView.layoutManager = LinearLayoutManager(activity?.baseContext)
         recyclerView.setHasFixedSize(true)
@@ -85,8 +92,9 @@ class ClienteFragment : Fragment() {
         if (newArrayList.isEmpty()) {
             recyclerView.visibility = View.GONE
             llCadastrar.visibility = View.VISIBLE
+        } else {
+            recyclerView.adapter = ClienteAdapter(newArrayList)
         }
-        recyclerView.adapter = ClienteAdapter(newArrayList)
     }
 
     override fun onCreateView(
