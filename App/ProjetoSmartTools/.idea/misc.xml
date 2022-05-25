@@ -83,6 +83,7 @@
         <entry key="app/src/main/res/drawable/view_redonda_vermelho.xml" value="0.26927083333333335" />
         <entry key="app/src/main/res/drawable/view_with_corner_radius.xml" value="0.2375" />
         <entry key="app/src/main/res/layout/activity_ajustes.xml" value="0.21614583333333334" />
+        <entry key="app/src/main/res/layout/activity_cadastro_do_cliente.xml" value="0.2140625" />
         <entry key="app/src/main/res/layout/activity_cadastro_oficina.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_cadastro_password.xml" value="0.2171875" />
         <entry key="app/src/main/res/layout/activity_cadastro_senha.xml" value="0.25" />

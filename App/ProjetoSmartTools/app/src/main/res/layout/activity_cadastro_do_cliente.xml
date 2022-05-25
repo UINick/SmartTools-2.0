@@ -42,7 +42,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="27dp"
                 android:tooltipText="Digite seu nome"
-                android:id="@+id/ti_cliente">
+                android:id="@+id/ti_nome_cadastro">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                 android:layout_marginTop="17dp"
                 android:layout_marginRight="27dp"
                 android:tooltipText="Digite seu Telefone"
-                android:id="@+id/ti_telefone">
+                android:id="@+id/ti_telefone_cadastro">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -77,7 +77,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="27dp"
                 android:tooltipText="Digite seu CPF"
-                android:id="@+id/ti_cpf">
+                android:id="@+id/ti_cpf_cadastro">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -95,7 +95,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="27dp"
                 android:tooltipText="Digite seu email"
-                android:id="@+id/ti_montadora">
+                android:id="@+id/ti_email_cadastro">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
