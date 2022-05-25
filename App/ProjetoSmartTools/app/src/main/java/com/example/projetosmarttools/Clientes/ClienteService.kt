@@ -1,8 +1,5 @@
-package com.example.projetosmarttools.Fragment.Cliente.Service
+package com.example.projetosmarttools.Clientes
 
-import com.example.projetosmarttools.Cadastro.Service.Oficina.CadastroOficina
-import com.example.projetosmarttools.Fragment.Cliente.ClienteVO
-import com.example.projetosmarttools.Login.Service.LogingResponse
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

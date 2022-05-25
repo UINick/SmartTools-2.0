@@ -1,4 +1,4 @@
-package com.example.projetosmarttools.CadastroCliente
+package com.example.projetosmarttools.Clientes.CadastroCliente
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,9 +7,8 @@ import android.widget.Toast
 import com.example.projetosmarttools.Fragment.Loading.LoadingScreen
 import com.example.projetosmarttools.Fragment.Modal.BottomSheetErrorFragment
 import com.example.projetosmarttools.R
-import com.example.projetosmarttools.Service.SessionManager
+import com.example.projetosmarttools.SessionManager
 import com.google.android.material.textfield.TextInputLayout
-import kotlinx.android.synthetic.main.loading_screen.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

@@ -1,4 +1,4 @@
-package com.example.projetosmarttools.CadastroCliente
+package com.example.projetosmarttools.Clientes.CadastroCliente
 
 data class CadastroClienteVO(
     val cpf: String,

@@ -1,8 +1,7 @@
-package com.example.projetosmarttools.Service
+package com.example.projetosmarttools
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.example.projetosmarttools.R
 
 class SessionManager (context: Context) {
 

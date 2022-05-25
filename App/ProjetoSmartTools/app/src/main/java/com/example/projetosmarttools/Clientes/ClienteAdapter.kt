@@ -1,4 +1,4 @@
-package com.example.projetosmarttools.Fragment.Cliente
+package com.example.projetosmarttools.Clientes
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -6,13 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.projetosmarttools.Cadastro.Activities.CadastroPassword
-import com.example.projetosmarttools.CadastroCliente.CadastroDoCliente
-import com.example.projetosmarttools.CadastroCliente.DetalheCliente
-import com.example.projetosmarttools.Fragment.Extrato.ExtratoAdapter
-import com.example.projetosmarttools.Fragment.Extrato.ExtratoVO
+import com.example.projetosmarttools.Clientes.CadastroCliente.DetalheCliente
 import com.example.projetosmarttools.R
 
 class ClienteAdapter(private val clienteList: ArrayList<ClienteVO>):
@@ -37,7 +32,7 @@ class ClienteAdapter(private val clienteList: ArrayList<ClienteVO>):
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewClienteHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_item_cliente, parent, false)
-        return ClienteAdapter.ViewClienteHolder(itemView)
+        return ViewClienteHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: ViewClienteHolder, position: Int) {

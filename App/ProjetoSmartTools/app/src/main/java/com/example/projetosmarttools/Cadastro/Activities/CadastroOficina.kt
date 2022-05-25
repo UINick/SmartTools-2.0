@@ -8,7 +8,7 @@ import com.example.projetosmarttools.Cadastro.Service.Oficina.CadastroOficinaVO
 import com.example.projetosmarttools.Fragment.Loading.LoadingScreen
 import com.example.projetosmarttools.R
 
-import com.example.projetosmarttools.Service.SessionManager
+import com.example.projetosmarttools.SessionManager
 import com.google.android.material.textfield.TextInputLayout
 import retrofit2.Call
 import retrofit2.Callback

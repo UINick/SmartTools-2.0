@@ -1,4 +1,4 @@
-package com.example.projetosmarttools.CadastroCliente
+package com.example.projetosmarttools.Clientes.CadastroCliente
 
 import retrofit2.Call
 import retrofit2.Retrofit

@@ -1,4 +1,4 @@
-package com.example.projetosmarttools.CadastroCliente
+package com.example.projetosmarttools.Clientes.CadastroCliente
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

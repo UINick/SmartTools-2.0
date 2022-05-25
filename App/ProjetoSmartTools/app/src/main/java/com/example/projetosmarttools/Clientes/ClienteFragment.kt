@@ -1,7 +1,6 @@
-package com.example.projetosmarttools.Fragment.Cliente
+package com.example.projetosmarttools.Clientes
 
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,18 +9,12 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.projetosmarttools.CadastroCliente.CadastroDoCliente
-import com.example.projetosmarttools.Fragment.Cliente.Service.ClienteService
-import com.example.projetosmarttools.Fragment.Extrato.ExtratoAdapter
-import com.example.projetosmarttools.Fragment.Extrato.ExtratoVO
+import com.example.projetosmarttools.Clientes.CadastroCliente.CadastroDoCliente
 import com.example.projetosmarttools.Fragment.Loading.LoadingScreen
-import com.example.projetosmarttools.Login.Service.LoginMecanico
-import com.example.projetosmarttools.Login.Service.LogingResponse
 import com.example.projetosmarttools.R
-import com.example.projetosmarttools.Service.SessionManager
+import com.example.projetosmarttools.SessionManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

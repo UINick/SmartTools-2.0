@@ -1,4 +1,4 @@
-package com.example.projetosmarttools.Fragment.Cliente
+package com.example.projetosmarttools.Clientes
 
 data class ClienteVO(
     val nome: String,
