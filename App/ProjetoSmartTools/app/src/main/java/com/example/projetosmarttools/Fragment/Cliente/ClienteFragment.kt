@@ -43,6 +43,26 @@ class ClienteFragment : Fragment() {
 
         newArrayList = arrayListOf<ClienteVO>()
 
+        llCadastrar = view.findViewById(R.id.ll_cadastrar)
+        recyclerView = view.findViewById(R.id.recycler_cliente_id)
+        btnCadastrarCliente = view.findViewById(R.id.btn_CadastrarCliente)
+
+        btnCadastrarCliente.setOnClickListener {
+            val cadastrarCliente = Intent(view.context, CadastroDoCliente::class.java)
+            startActivity(cadastrarCliente)
+        }
+
+        recyclerView.layoutManager = LinearLayoutManager(activity?.baseContext)
+        recyclerView.setHasFixedSize(true)
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        callService()
+    }
+
+    private fun callService() {
         LoadingScreen.displayLoadingWithText(context, "", false)
 
         val request = ClienteService.getAllClients()
@@ -51,6 +71,11 @@ class ClienteFragment : Fragment() {
 
                 override fun onResponse(call: Call<List<ClienteVO>>, response: Response<List<ClienteVO>>) {
                     if (response.code() == 200) {
+                        if (newArrayList.size > 0) {
+                            for (i in newArrayList.indices) {
+                                newArrayList.removeAt(i)
+                            }
+                        }
                         response.body()?.forEach { cliente ->
                             newArrayList.add(cliente)
                         }
@@ -73,19 +98,6 @@ class ClienteFragment : Fragment() {
                 }
 
             })
-
-        llCadastrar = view.findViewById(R.id.ll_cadastrar)
-        recyclerView = view.findViewById(R.id.recycler_cliente_id)
-        btnCadastrarCliente = view.findViewById(R.id.btn_CadastrarCliente)
-
-        btnCadastrarCliente.setOnClickListener {
-            val cadastrarCliente = Intent(view.context, CadastroDoCliente::class.java)
-            startActivity(cadastrarCliente)
-        }
-
-        recyclerView.layoutManager = LinearLayoutManager(activity?.baseContext)
-        recyclerView.setHasFixedSize(true)
-
     }
 
     private fun getUserData() {
