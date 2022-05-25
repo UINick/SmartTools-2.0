@@ -42,6 +42,8 @@ class ClienteFragment : Fragment() {
 
         newArrayList = arrayListOf<ClienteVO>()
 
+        LoadingScreen.displayLoadingWithText(context, "", false)
+
         val request = ClienteService.getAllClients()
         request.fetchClients(token = "Bearer ${sessionManager.fetchAuthToken()}")
             .enqueue(object : Callback<List<ClienteVO>>{
@@ -52,8 +54,10 @@ class ClienteFragment : Fragment() {
                             newArrayList.add(cliente)
                         }
                         getUserData()
+                        LoadingScreen.hideLoading()
                         Toast.makeText(activity?.baseContext, "Deu certo =)", Toast.LENGTH_SHORT).show()
                     } else {
+                        LoadingScreen.hideLoading()
                         Toast.makeText(activity?.baseContext, "Tenta dnv pfv", Toast.LENGTH_SHORT).show()
                     }
                 }
@@ -63,6 +67,7 @@ class ClienteFragment : Fragment() {
                     println("ESSE É O ERRO DO CLIENTE =====> ${t.cause}")
                     println("ESSE É O ERRO DO CLIENTE =====> ${t.localizedMessage}")
                     println("ESSE É O ERRO DO CLIENTE =====> ${t.stackTrace}")
+                    LoadingScreen.hideLoading()
                     Toast.makeText(activity?.baseContext, "Deu erro =(", Toast.LENGTH_SHORT).show()
                 }
 
