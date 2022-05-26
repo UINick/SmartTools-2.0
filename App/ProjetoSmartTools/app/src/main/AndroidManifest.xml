@@ -48,6 +48,9 @@
             android:name=".CadastroExtrato.Entrada"
             android:exported="false" />
         <activity
+            android:name=".NovasTransacoes"
+            android:exported="false" />
+        <activity
             android:name=".Ajustes"
             android:exported="false" />
         <activity
