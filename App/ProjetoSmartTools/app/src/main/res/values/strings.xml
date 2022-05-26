@@ -19,7 +19,8 @@
     <string name="endereco">Endereço:</string>
     <string name="cnpj">CNPJ:</string>
     <string name="email">Email:</string>
-
+    <string name="nova_transacao">Nova Transação</string>
+    
     <string-array name="categoria_entrada">
         <item>Manutenção</item>
         <item>Troca de óleo</item>
