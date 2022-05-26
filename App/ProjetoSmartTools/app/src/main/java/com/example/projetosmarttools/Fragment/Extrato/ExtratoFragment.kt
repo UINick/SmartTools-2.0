@@ -36,8 +36,6 @@ class ExtratoFragment : Fragment() {
         recyclerView.setHasFixedSize(true)
 
         newArrayList = arrayListOf<ExtratoVO>()
-
-        getUserData()
     }
 
     override fun onResume() {
