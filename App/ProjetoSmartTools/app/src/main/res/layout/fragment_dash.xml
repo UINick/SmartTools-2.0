@@ -5,85 +5,89 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#f2f5e7"
-    tools:context=".Fragment.Dash.DashFragment">
+    tools:context=".Fragment.Dash.DashFragment"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#f2f5e7"
             android:orientation="vertical"
-            android:background="#f2f5e7">
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="2dp">
 
             <LinearLayout
-                android:layout_marginTop="-40dp"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="259dp"
+                android:layout_marginTop="-40dp"
                 android:background="@drawable/view_redonda_2c3333"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:layout_gravity="center"
                     android:layout_marginTop="40dp"
-                    android:layout_gravity="center">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
                         android:text="Mão na roda"
                         android:textColor="#ffffff"
-                        android:fontFamily="@font/poppins_bold"
-                        android:textSize="20sp">
-                    </TextView>
+                        android:textSize="20sp"></TextView>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="30sp"
-                        android:textColor="#ffffff"
-                        android:text="Saldo geral"
                         android:fontFamily="@font/poppins_bold"
-                        android:textSize="15sp"/>
+                        android:text="Saldo geral"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginStart="30dp">
+                        android:layout_marginStart="30dp"
+                        android:orientation="horizontal">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
                             android:text="R$ 1.500,00"
                             android:textColor="#ffffff"
-                            android:textSize="18sp"
-                            android:fontFamily="@font/poppins_regular"/>
+                            android:textSize="18sp" />
 
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/ic_open_eye"
                             android:layout_marginStart="20dp"
-                            android:layout_marginEnd="20dp"/>
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/ic_open_eye" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:orientation="horizontal"
                     android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
-                    android:layout_marginTop="20dp">
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="160dp"
@@ -103,31 +107,31 @@
                                 <androidx.appcompat.widget.LinearLayoutCompat
                                     android:layout_width="15dp"
                                     android:layout_height="15dp"
-                                    android:background="@drawable/view_redonda_verde"
+                                    android:layout_marginStart="20dp"
                                     android:layout_marginTop="20dp"
-                                    android:layout_marginStart="20dp"/>
+                                    android:background="@drawable/view_redonda_verde" />
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp"
-                                    android:text="Entrada"
-                                    android:textSize="15sp"
                                     android:layout_marginLeft="10dp"
                                     android:layout_marginTop="15dp"
                                     android:fontFamily="@font/poppins_bold"
-                                    android:textColor="#ffffff"/>
+                                    android:text="Entrada"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15sp" />
 
                             </LinearLayout>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="20dp"
-                                android:text="R$ 1.500,00"
-                                android:textSize="18sp"
                                 android:layout_marginStart="25dp"
                                 android:layout_marginTop="5dp"
                                 android:fontFamily="@font/poppins_regular"
-                                android:textColor="#ffffff"/>
+                                android:text="R$ 1.500,00"
+                                android:textColor="#ffffff"
+                                android:textSize="18sp" />
 
                         </LinearLayout>
 
@@ -152,31 +156,31 @@
                                 <androidx.appcompat.widget.LinearLayoutCompat
                                     android:layout_width="15dp"
                                     android:layout_height="15dp"
-                                    android:background="@drawable/view_redonda_vermelho"
+                                    android:layout_marginStart="20dp"
                                     android:layout_marginTop="20dp"
-                                    android:layout_marginStart="20dp"/>
+                                    android:background="@drawable/view_redonda_vermelho" />
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp"
-                                    android:text="Saída"
-                                    android:textSize="15sp"
                                     android:layout_marginLeft="10dp"
                                     android:layout_marginTop="15dp"
                                     android:fontFamily="@font/poppins_bold"
-                                    android:textColor="#ffffff"/>
+                                    android:text="Saída"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15sp" />
 
                             </LinearLayout>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="20dp"
-                                android:text="R$ 1.500,00"
-                                android:textSize="18sp"
                                 android:layout_marginStart="25dp"
                                 android:layout_marginTop="5dp"
                                 android:fontFamily="@font/poppins_regular"
-                                android:textColor="#ffffff"/>
+                                android:text="R$ 1.500,00"
+                                android:textColor="#ffffff"
+                                android:textSize="18sp" />
 
                         </LinearLayout>
 
@@ -198,43 +202,60 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="#f2f5e7">
+                        android:background="#f2f5e7"
+                        android:orientation="vertical">
+
 
                         <LinearLayout
+                            android:id="@+id/linear_details"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/linear_details"
+                            android:orientation="vertical" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="226dp"
                             android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:gravity="center"
+                                android:text="Entradas por categoria"
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
+
+                            <com.androidplot.pie.PieChart
+                                android:id="@+id/pieChart"
+                                style="@style/APDefacto.Light"
+                                android:layout_width="fill_parent"
+                                android:layout_height="152dp"
+                                app:backgroundColor="#f2f5e7" />
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="300dp"
+                            android:layout_height="match_parent"
                             android:orientation="vertical">
 
-                            <TextView
-                                android:gravity="center"
-                                android:layout_marginTop="40dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:textColor="#000000"
-                                android:text="Entradas por categoria"
-                                android:textSize="16sp"
-                                android:fontFamily="@font/poppins_bold"
+                            <Button
+                                android:id="@+id/add"
+                                android:layout_width="250dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/botao_cliente"
+                                android:backgroundTint="#2C3333"
+                                android:drawableBottom="@drawable/ic_add"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@string/nova_transacao"
+                                android:textSize="15sp"
                                 />
 
-                            <com.androidplot.pie.PieChart
-                                android:layout_width="fill_parent"
-                                android:layout_height="fill_parent"
-                                style="@style/APDefacto.Light"
-                                app:backgroundColor="#f2f5e7"
-                                android:id="@+id/pieChart" />
-
                         </LinearLayout>
-                        <!--                    teste-->
                     </LinearLayout>
-
                 </ScrollView>
 
             </LinearLayout>
