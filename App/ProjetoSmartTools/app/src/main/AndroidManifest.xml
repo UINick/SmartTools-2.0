@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.projetosmarttools">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -12,8 +11,42 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/icon_smart_tools_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar"
-        android:usesCleartextTraffic="true">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity
+            android:name="com.example.projetosmarttools.Clientes.CadastroCliente.DetalheCliente"
+            android:exported="false" />
+        <activity
+            android:name=".CadastroExtrato.DetalheExtrato"
+            android:exported="false" />
+        <activity
+            android:name="com.example.projetosmarttools.Clientes.CadastroCliente.CadastroDoCliente"
+            android:exported="false" />
+        <activity
+            android:name=".CadastroVeiculo.CadastroVeiculo"
+            android:exported="false" />
+        <activity
+            android:name=".CadastroExtrato.SaidaExtrato"
+            android:exported="false" />
+        <activity
+            android:name=".CadastroExtrato.EntradaExtrato"
+            android:exported="false" />
+        <activity
+            android:name=".CadastroVeiculo.Veiculo"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.ClienteCadastro"
+            android:exported="false"
+            android:label="@string/title_activity_cliente_cadastro" />
+        <activity
+            android:name=".ui.login.CadastroCliente"
+            android:exported="false"
+            android:label="@string/title_activity_cadastro_cliente" />
+        <activity
+            android:name=".CadastroExtrato.Saida"
+            android:exported="false" />
+        <activity
+            android:name=".CadastroExtrato.Entrada"
+            android:exported="false" />
         <activity
             android:name=".NovasTransacoes"
             android:exported="false" />

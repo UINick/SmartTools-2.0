@@ -1,18 +1,14 @@
 package com.example.projetosmarttools.Cadastro.Activities
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.projetosmarttools.Fragment.Modal.BottomSheetErrorFragment
 import com.example.projetosmarttools.Cadastro.Service.Oficina.CadastroOficina
 import com.example.projetosmarttools.Cadastro.Service.Oficina.CadastroOficinaVO
 import com.example.projetosmarttools.Fragment.Loading.LoadingScreen
-import com.example.projetosmarttools.Login.Activities.LoginDoMecanico
 import com.example.projetosmarttools.R
-import com.example.projetosmarttools.Service.ApiClient
 
-import com.example.projetosmarttools.Service.SessionManager
+import com.example.projetosmarttools.SessionManager
 import com.google.android.material.textfield.TextInputLayout
 import retrofit2.Call
 import retrofit2.Callback
@@ -27,7 +23,6 @@ class CadastroOficina : AppCompatActivity() {
     private lateinit var tiSenha: TextInputLayout
 
     private lateinit var sessionManager: SessionManager
-    private lateinit var apiClient: ApiClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +34,6 @@ class CadastroOficina : AppCompatActivity() {
         tiTelefone = findViewById(R.id.ti_telefone)
         tiSenha = findViewById(R.id.ti_senha)
 
-        apiClient = ApiClient()
         sessionManager = SessionManager(this)
     }
 

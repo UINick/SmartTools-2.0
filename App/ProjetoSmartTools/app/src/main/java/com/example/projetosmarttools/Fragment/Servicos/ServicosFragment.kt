@@ -5,11 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.projetosmarttools.Fragment.Cliente.ClienteAdapter
-import com.example.projetosmarttools.Fragment.Cliente.ClienteVO
 import com.example.projetosmarttools.R
 
 

@@ -5,10 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.projetosmarttools.Fragment.Cliente.ClienteAdapter
-import com.example.projetosmarttools.Fragment.Cliente.ClienteVO
 import com.example.projetosmarttools.R
 
 class ServicosAdapter(private val servicoList: ArrayList<ServicoVO>):

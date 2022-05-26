@@ -1,15 +1,14 @@
-package com.example.projetosmarttools.Service
+package com.example.projetosmarttools
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.example.projetosmarttools.R
 
 class SessionManager (context: Context) {
 
     private var prefs: SharedPreferences = context.getSharedPreferences(context.getString(R.string.app_name), Context.MODE_PRIVATE)
 
     companion object {
-        const val USER_TOKEN = "user_token"
+        const val USER_TOKEN = "token"
     }
     /**
      * Função para salvar token de autenticação
