@@ -4,3 +4,9 @@ data class ExtratoVO(
     var dataRegistro:String,
     var valor: Double,
 )
+
+data class ExtratoCadastro(
+    val categoria: String,
+    val descricao: String,
+    val valor: Double
+)
