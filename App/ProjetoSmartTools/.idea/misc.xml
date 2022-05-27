@@ -94,6 +94,7 @@
         <entry key="app/src/main/res/layout/activity_cadastro_senha.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_dash_board.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_detalhe_cliente.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_detalhe_extrato.xml" value="0.2140625" />
         <entry key="app/src/main/res/layout/activity_detalhes_do_cliente.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_entrada_extrato.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_extrato.xml" value="0.21614583333333334" />
@@ -117,6 +118,7 @@
         <entry key="app/src/main/res/layout/fragment_tab_bar.xml" value="0.21614583333333334" />
         <entry key="app/src/main/res/layout/fragment_transacoes.xml" value="0.14270833333333333" />
         <entry key="app/src/main/res/layout/list_item_cliente.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/list_item_extrato.xml" value="0.16770833333333332" />
         <entry key="app/src/main/res/layout/loading_screen.xml" value="0.1859375" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1859375" />
       </map>

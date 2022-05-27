@@ -1,6 +1,7 @@
 package com.example.projetosmarttools.Fragment.Extrato
 
 data class ExtratoVO(
+    val id: Int,
     var dataRegistro:String,
     var valor: Double,
     var tipoLancamento: String
