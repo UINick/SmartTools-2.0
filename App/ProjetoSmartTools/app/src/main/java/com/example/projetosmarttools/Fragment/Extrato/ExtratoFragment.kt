@@ -46,7 +46,7 @@ class ExtratoFragment : Fragment() {
     private fun callService() {
         LoadingScreen.displayLoadingWithText(context, "", false)
 
-        val request = ExtratoService.getLancamentos()
+        val request = ExtratoService.extrato()
         request.fetchLancamentos(token = "Bearer ${sessionManager.fetchAuthToken()}")
             .enqueue(object : Callback<List<ExtratoVO>> {
 

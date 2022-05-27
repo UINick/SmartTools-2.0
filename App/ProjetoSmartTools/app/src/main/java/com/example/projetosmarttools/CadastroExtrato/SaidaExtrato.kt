@@ -8,18 +8,25 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import com.example.projetosmarttools.Fragment.Loading.LoadingScreen
 import com.example.projetosmarttools.R
+import com.google.android.material.textfield.TextInputLayout
 
 class SaidaExtrato : AppCompatActivity() {
 
     lateinit var spinner: Spinner
     lateinit var categoria: String
+    lateinit var valor: TextInputLayout
+    lateinit var descricao: TextInputLayout
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_saida_extrato)
 
         spinner = findViewById(R.id.sp_categoria_saida)
+        valor = findViewById(R.id.ti_valor)
+        descricao = findViewById(R.id.ti_descricao)
 
         val options = arrayOf("Funcionario", "Contas", "Peças", "Outros")
 
@@ -35,5 +42,10 @@ class SaidaExtrato : AppCompatActivity() {
             }
 
         }
+    }
+
+    fun cadastrarSaida(view: View) {
+
+        LoadingScreen.displayLoadingWithText(this, "", false)
     }
 }

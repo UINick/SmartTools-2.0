@@ -43,7 +43,7 @@
                 android:layout_marginTop="17dp"
                 android:layout_marginRight="27dp"
                 android:tooltipText="Descrição da entrada"
-                android:id="@+id/ti_descricao">
+                android:id="@+id/ti_descricao_entrada">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -77,7 +77,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="27dp"
                 android:tooltipText="Digite o valor"
-                android:id="@+id/ti_valor">
+                android:id="@+id/ti_valor_entrada">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -101,7 +101,7 @@
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
                 android:text="Cadastrar"
-                android:onClick="cadastro"
+                android:onClick="cadastrarEntrada"
                 android:background="@drawable/botao_mecanico">
             </Button>
         </LinearLayout>
