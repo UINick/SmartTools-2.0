@@ -2,6 +2,7 @@ package com.example.projetosmarttools.CadastroExtrato
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import com.example.projetosmarttools.Fragment.Extrato.ExtratoDetalheVO
@@ -68,5 +69,9 @@ class DetalheExtrato : AppCompatActivity() {
 
         })
 
+    }
+
+    fun voltar(view: View) {
+        finish()
     }
 }
