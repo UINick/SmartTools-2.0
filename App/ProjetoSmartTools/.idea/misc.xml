@@ -62,11 +62,14 @@
         <entry key="..\:/Users/vinic/OneDrive/Documentos/Pesquisa e Inovacao 4o semestre/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/fragment_saida.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/vinic/OneDrive/Documentos/Pesquisa e Inovacao 4o semestre/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/fragment_tab_bar.xml" value="0.35" />
         <entry key="..\:/Users/vinic/OneDrive/Documentos/Pesquisa e Inovacao 4o semestre/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/fragment_veiculo.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/vinic/OneDrive/Documentos/teste nick android/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_cadastro_do_cliente.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/vinic/OneDrive/Documentos/teste nick android/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_cadastro_da_placa.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/vinic/OneDrive/Documentos/teste nick android/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_cadastro_do_cliente.xml" value="0.264" />
         <entry key="..\:/Users/vinic/OneDrive/Documentos/teste nick android/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_cadastro_password.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/vinic/OneDrive/Documentos/teste nick android/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_cadastro_veiculo.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/vinic/OneDrive/Documentos/teste nick android/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_cliente_cadastro.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/vinic/OneDrive/Documentos/teste nick android/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_detalhe_cliente.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/vinic/OneDrive/Documentos/teste nick android/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_detalhe_extrato.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/vinic/OneDrive/Documentos/teste nick android/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_detalhe_veiculo_servico.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/vinic/OneDrive/Documentos/teste nick android/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_entrada_extrato.xml" value="0.2" />
         <entry key="..\:/Users/vinic/OneDrive/Documentos/teste nick android/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_home.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/vinic/OneDrive/Documentos/teste nick android/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/activity_login_do_mecanico.xml" value="0.36102564102564105" />
@@ -78,6 +81,7 @@
         <entry key="..\:/Users/vinic/OneDrive/Documentos/teste nick android/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/fragment_entrada.xml" value="0.36102564102564105" />
         <entry key="..\:/Users/vinic/OneDrive/Documentos/teste nick android/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/fragment_saida.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/vinic/OneDrive/Documentos/teste nick android/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/fragment_veiculo.xml" value="0.1" />
+        <entry key="..\:/Users/vinic/OneDrive/Documentos/teste nick android/SmartTools-2.0/App/ProjetoSmartTools/app/src/main/res/layout/list_item_servico.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable/background_gradiente.xml" value="0.259375" />
         <entry key="app/src/main/res/drawable/botao_cliente.xml" value="0.259375" />
         <entry key="app/src/main/res/drawable/botao_mecanico.xml" value="0.259375" />
