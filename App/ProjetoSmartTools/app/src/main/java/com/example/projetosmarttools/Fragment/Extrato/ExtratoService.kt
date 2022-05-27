@@ -4,15 +4,15 @@ import com.example.projetosmarttools.Clientes.CadastroCliente.CadastroClienteVO
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface ExtratoService {
 
     @GET("lancamentos")
     fun fetchLancamentos(@Header("Authorization") token: String): Call<List<ExtratoVO>>
+
+    @GET("lancamentos/{path_variable}")
+    fun fetchLancamentoWithId(@Path("path_variable") idExtrato: Int, @Header("Authorization") token: String): Call<ExtratoDetalheVO>
 
     @POST("lancamentos/receitas")
     fun postReceita(@Header("Authorization") token: String, @Body novaEntrada: ExtratoCadastro): Call<Void>
