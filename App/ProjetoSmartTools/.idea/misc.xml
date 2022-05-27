@@ -119,6 +119,7 @@
         <entry key="app/src/main/res/layout/fragment_transacoes.xml" value="0.14270833333333333" />
         <entry key="app/src/main/res/layout/list_item_cliente.xml" value="0.1" />
         <entry key="app/src/main/res/layout/list_item_extrato.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/list_item_servico.xml" value="0.1484375" />
         <entry key="app/src/main/res/layout/loading_screen.xml" value="0.1859375" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1859375" />
       </map>
