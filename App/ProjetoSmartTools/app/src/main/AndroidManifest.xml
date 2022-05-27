@@ -13,13 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name="com.example.projetosmarttools.Clientes.CadastroCliente.DetalheCliente"
+            android:name=".Clientes.DetalhesDoCliente"
+            android:exported="false" />
+        <activity
+            android:name=".Clientes.CadastroCliente.DetalheCliente"
             android:exported="false" />
         <activity
             android:name=".CadastroExtrato.DetalheExtrato"
             android:exported="false" />
         <activity
-            android:name="com.example.projetosmarttools.Clientes.CadastroCliente.CadastroDoCliente"
+            android:name=".Clientes.CadastroCliente.CadastroDoCliente"
             android:exported="false" />
         <activity
             android:name=".CadastroVeiculo.CadastroVeiculo"

@@ -16,14 +16,15 @@ class ClienteAdapter(private val clienteList: ArrayList<ClienteVO>):
 
     class ViewClienteHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
+        var idCliente: Int = 0
         val nome: TextView = itemView.findViewById(R.id.lblSecond)
         val telefone: TextView = itemView.findViewById(R.id.txtSecond)
         val cell: View = itemView.findViewById(R.id.ll_view)
 
         init {
             this.cell.setOnClickListener {
-                val detalheCliente = Intent(it.context, DetalheCliente::class.java)
-                detalheCliente.putExtra("nome", nome.text.toString())
+                val detalheCliente = Intent(it.context, DetalhesDoCliente::class.java)
+                detalheCliente.putExtra("idCliente", idCliente)
                 it.context.startActivity(detalheCliente)
             }
         }
@@ -37,7 +38,7 @@ class ClienteAdapter(private val clienteList: ArrayList<ClienteVO>):
 
     override fun onBindViewHolder(holder: ViewClienteHolder, position: Int) {
         val currentItem = clienteList[position]
-
+        holder.idCliente = currentItem.id
         holder.nome.setText(currentItem.nome)
         holder.telefone.setText(currentItem.telefone)
     }
