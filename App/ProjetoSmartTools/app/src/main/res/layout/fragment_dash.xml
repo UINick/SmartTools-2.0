@@ -214,7 +214,7 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="226dp"
+                            android:layout_height="286dp"
                             android:orientation="vertical">
 
                             <TextView
@@ -231,7 +231,7 @@
                                 android:id="@+id/pieChart"
                                 style="@style/APDefacto.Light"
                                 android:layout_width="fill_parent"
-                                android:layout_height="152dp"
+                                android:layout_height="fill_parent"
                                 app:backgroundColor="#f2f5e7" />
                         </LinearLayout>
 
@@ -242,6 +242,7 @@
 
                             <Button
                                 android:id="@+id/add"
+                                android:layout_marginTop="40dp"
                                 android:layout_width="250dp"
                                 android:layout_height="70dp"
                                 android:layout_gravity="center"
