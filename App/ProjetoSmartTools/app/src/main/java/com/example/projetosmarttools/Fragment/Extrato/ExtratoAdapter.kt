@@ -28,10 +28,10 @@ class ExtratoAdapter(private val extratoList: ArrayList<ExtratoVO>):
         holder.data.setText(currentItem.dataRegistro)
 
 
-        if (currentItem.valor > 0) {
-            holder.viewLateral.setBackgroundResource(R.drawable.view_redonda_vermelho)
-        } else {
+        if (currentItem.tipoLancamento == "RECEITA") {
             holder.viewLateral.setBackgroundResource(R.drawable.view_redonda_verde)
+        } else {
+            holder.viewLateral.setBackgroundResource(R.drawable.view_redonda_vermelho)
         }
     }
 
