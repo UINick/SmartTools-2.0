@@ -17,7 +17,7 @@ interface ExtratoService {
     @POST("lancamentos/receitas")
     fun postReceita(@Header("Authorization") token: String, @Body novaEntrada: ExtratoCadastro): Call<Void>
 
-    @POST("lancamentos/despesa")
+    @POST("lancamentos/despesas")
     fun postDespesa(@Header("Authorization") token: String, @Body novaSaida: ExtratoCadastro): Call<Void>
 
     companion object {
