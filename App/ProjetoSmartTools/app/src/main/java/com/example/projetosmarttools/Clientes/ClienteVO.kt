@@ -5,3 +5,11 @@ data class ClienteVO(
     val telefone: String,
     val id: Int
 )
+
+data class DetalheClienteVO(
+    val nome: String,
+    val telefone: String,
+    val cpf: String,
+    val email:String
+)
+
