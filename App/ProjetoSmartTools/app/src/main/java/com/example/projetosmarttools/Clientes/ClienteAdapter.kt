@@ -18,7 +18,7 @@ class ClienteAdapter(private val clienteList: ArrayList<ClienteVO>):
 
         val nome: TextView = itemView.findViewById(R.id.lblSecond)
         val telefone: TextView = itemView.findViewById(R.id.txtSecond)
-        val cell: LinearLayout = itemView.findViewById(R.id.ll_view)
+        val cell: View = itemView.findViewById(R.id.ll_view)
 
         init {
             this.cell.setOnClickListener {

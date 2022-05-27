@@ -114,6 +114,7 @@
         <entry key="app/src/main/res/layout/fragment_servicos.xml" value="0.21614583333333334" />
         <entry key="app/src/main/res/layout/fragment_tab_bar.xml" value="0.21614583333333334" />
         <entry key="app/src/main/res/layout/fragment_transacoes.xml" value="0.14270833333333333" />
+        <entry key="app/src/main/res/layout/list_item_cliente.xml" value="0.3490783410138249" />
         <entry key="app/src/main/res/layout/loading_screen.xml" value="0.1859375" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1859375" />
       </map>
