@@ -25,3 +25,8 @@ data class ExtratoCadastro(
     val descricao: String,
     val valor: Double
 )
+
+data class ResumoLancamentoVO(
+    val valorTotalReceitas: Double,
+    val valorTotalDespesas: Double
+)
