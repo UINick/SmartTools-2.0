@@ -51,19 +51,17 @@ class DetalheExtrato : AppCompatActivity() {
                     descricaoExtrato.setText(response.body()!!.descricao)
                     categoriaExtrato.setText(response.body()!!.categoria.nome)
                     dataExtrato.setText(response.body()!!.dataRegistro)
-                    precoExtrato.setText(response.body()!!.descricao).toString()
+                    precoExtrato.setText(response.body()!!.valor.toString())
                     LoadingScreen.hideLoading()
                 }
             }
 
             override fun onFailure(call: Call<ExtratoDetalheVO>, t: Throwable) {
                 LoadingScreen.hideLoading()
-                Toast.makeText(baseContext, "eita", Toast.LENGTH_SHORT).show()
                 println("Esse é o erro =====> ${t.stackTrace} ")
                 println("Esse é o erro =====> ${t.message} ")
                 println("Esse é o erro =====> ${t.cause} ")
                 println("Esse é o erro =====> ${t.localizedMessage} ")
-
             }
 
 

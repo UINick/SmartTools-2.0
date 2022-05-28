@@ -82,7 +82,6 @@ class ClienteFragment : Fragment() {
                     } else {
                         LoadingScreen.hideLoading()
                         getUserData()
-                        Toast.makeText(activity?.baseContext, "Tenta dnv pfv", Toast.LENGTH_SHORT).show()
                     }
                 }
 
