@@ -124,7 +124,7 @@ class DashFragment : Fragment() {
                         saidaEye = response.body()!!.valorTotalDespesas
                         saldoEye = conta
 
-                            opa(
+                            chartSettings(
                                 income = response.body()!!.valorTotalReceitas,
                                 outcome = response.body()!!.valorTotalDespesas
                             )
@@ -138,19 +138,13 @@ class DashFragment : Fragment() {
             })
     }
 
-    fun roundOffDecimal(number: Double): Double {
-        val df = DecimalFormat("#.##")
-        df.roundingMode = RoundingMode.FLOOR
-        return df.format(number).toDouble()
-    }
-
-    private fun opa(income: Double, outcome: Double) {
+    private fun chartSettings(income: Double, outcome: Double) {
 
         val inPercent = (income * 100) / (income + outcome)
         val outPercent = (outcome * 100) / (income + outcome)
 
-        val entrada = Segment("${inPercent.roundToInt()}%", income)
-        val saida = Segment("${outPercent.roundToInt()}%", outcome)
+        val entrada = Segment("${roundOffDecimal(inPercent)}%", income)
+        val saida = Segment("${roundOffDecimal(outPercent)}%", outcome)
 
         val entradaCor = SegmentFormatter(Color.parseColor("#107C41"))
         val saidaCor = SegmentFormatter(Color.parseColor("#C60000"))
@@ -162,6 +156,12 @@ class DashFragment : Fragment() {
         pie.addSegment(entrada, entradaCor)
         pie.addSegment(saida, saidaCor)
         pie.redraw()
+    }
+
+    fun roundOffDecimal(number: Double): Double {
+        val df = DecimalFormat("#.##")
+        df.roundingMode = RoundingMode.FLOOR
+        return df.format(number).toDouble()
     }
 
     override fun onCreateView(
