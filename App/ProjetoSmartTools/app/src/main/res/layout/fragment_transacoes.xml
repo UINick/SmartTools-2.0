@@ -23,18 +23,21 @@
                android:layout_width="30dp"
                android:layout_height="30dp"
                android:layout_marginStart="25dp"
+               android:id="@+id/img_transacao"
                android:src="@drawable/pilula_dash"/>
 
            <TextView
                android:layout_marginStart="40dp"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
+               android:id="@+id/categoria_transacao"
                android:text="Categoria"
                android:textSize="18sp"
                android:fontFamily="@font/poppins_medium"
                android:textColor="#000000"/>
 
            <TextView
+               android:id="@+id/valor_transacao"
                android:layout_marginStart="60dp"
                android:layout_marginEnd="10dp"
                android:layout_width="wrap_content"

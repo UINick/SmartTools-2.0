@@ -4,7 +4,9 @@ data class ExtratoVO(
     val id: Int,
     var dataRegistro:String,
     var valor: Double,
-    var tipoLancamento: String
+    var tipoLancamento: String,
+    val categoria: CategoriaExtratoVO,
+    val usuario: UsuarioVO
 )
 
 data class ExtratoDetalheVO(
@@ -29,4 +31,9 @@ data class ExtratoCadastro(
 data class ResumoLancamentoVO(
     val valorTotalReceitas: Double,
     val valorTotalDespesas: Double
+)
+
+data class UsuarioVO(
+    val id: Int,
+    val nomeOficina: String
 )

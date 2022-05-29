@@ -11,6 +11,9 @@ interface ExtratoService {
     @GET("lancamentos")
     fun fetchLancamentos(@Header("Authorization") token: String): Call<List<ExtratoVO>>
 
+    @GET("lancamentos")
+    fun fetchUsuario(@Header("Authorization") token: String): Call<ExtratoVO>
+
     @GET("lancamentos/{path_variable}")
     fun fetchLancamentoWithId(@Path("path_variable") idExtrato: Int, @Header("Authorization") token: String): Call<ExtratoDetalheVO>
 

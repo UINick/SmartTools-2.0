@@ -5,16 +5,26 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.example.projetosmarttools.Enum.EnumEntrada
 import com.example.projetosmarttools.R
 
 
 class FragmentTransacoes : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    lateinit var categoriaTransacao: TextView
+    lateinit var valorTransacao: TextView
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        categoriaTransacao = requireView().findViewById(R.id.categoria_transacao)
+        valorTransacao = requireView().findViewById(R.id.valor_transacao)
+
+        valorTransacao.text = arguments?.getString("valor")
+        categoriaTransacao.text = arguments?.getString("categoria")
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

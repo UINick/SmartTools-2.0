@@ -116,7 +116,7 @@
         <entry key="app/src/main/res/layout/fragment_menu_bar.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_servicos.xml" value="0.21614583333333334" />
         <entry key="app/src/main/res/layout/fragment_tab_bar.xml" value="0.21614583333333334" />
-        <entry key="app/src/main/res/layout/fragment_transacoes.xml" value="0.14270833333333333" />
+        <entry key="app/src/main/res/layout/fragment_transacoes.xml" value="0.25" />
         <entry key="app/src/main/res/layout/list_item_cliente.xml" value="0.1" />
         <entry key="app/src/main/res/layout/list_item_extrato.xml" value="0.16770833333333332" />
         <entry key="app/src/main/res/layout/list_item_servico.xml" value="0.1484375" />

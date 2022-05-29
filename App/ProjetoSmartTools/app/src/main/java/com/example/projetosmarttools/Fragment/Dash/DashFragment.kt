@@ -7,15 +7,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.widget.*
 import androidx.fragment.app.FragmentContainerView
 import com.androidplot.pie.PieChart
 import com.androidplot.pie.Segment
 import com.androidplot.pie.SegmentFormatter
+import com.example.projetosmarttools.Clientes.ClienteVO
 import com.example.projetosmarttools.Fragment.Extrato.ExtratoService
+import com.example.projetosmarttools.Fragment.Extrato.ExtratoVO
 import com.example.projetosmarttools.Fragment.Extrato.ResumoLancamentoVO
 import com.example.projetosmarttools.Fragment.Loading.LoadingScreen
 import com.example.projetosmarttools.Login.Activities.LoginDoMecanico
@@ -38,6 +37,8 @@ class DashFragment : Fragment() {
     lateinit var pie:PieChart
     lateinit var botaoAdd: Button
     private lateinit var sessionManager: SessionManager
+
+    lateinit var nomeOficina: TextView
     lateinit var entradaGeral: TextView
     lateinit var saidaGeral: TextView
     lateinit var saldoGeral: TextView
@@ -58,6 +59,7 @@ class DashFragment : Fragment() {
         saidaGeral = view.findViewById(R.id.saida_geral)
         entradaGeral = view.findViewById(R.id.entrada_geral)
         saldoGeral = view.findViewById(R.id.saldo_geral)
+        nomeOficina = view.findViewById(R.id.nome_oficina)
         eye = view.findViewById(R.id.eye_icon)
         sessionManager = SessionManager(requireActivity().baseContext)
 
@@ -79,24 +81,13 @@ class DashFragment : Fragment() {
                 setVisible = false
             }
         }
-
-
-//        val transaction = activity?.supportFragmentManager!!.beginTransaction()
-//
-//        view.findViewById<LinearLayout>(R.id.linear_details).removeAllViews()
-//
-//        repeat(6) {
-//            val fragmento = FragmentContainerView(view.context)
-//            fragmento.id = View.generateViewId()
-//            view.findViewById<LinearLayout>(R.id.linear_details).addView(fragmento)
-//            transaction.add(fragmento.id, FragmentTransacoes::class.java, null)
-//        }
-//        transaction.commit()
-
     }
 
     override fun onResume() {
         super.onResume()
+
+
+
         callChartService()
     }
 
@@ -111,9 +102,8 @@ class DashFragment : Fragment() {
                     call: Call<ResumoLancamentoVO>,
                     response: Response<ResumoLancamentoVO>
                 ) {
-                    LoadingScreen.hideLoading()
                     if (response.code() == 200) {
-
+                        nomeOficinaService()
                         val conta = response.body()!!.valorTotalReceitas - response.body()!!.valorTotalDespesas
 
                         saldoGeral.text = "R$ ${roundOffDecimal(conta)}"
@@ -156,6 +146,26 @@ class DashFragment : Fragment() {
         pie.addSegment(entrada, entradaCor)
         pie.addSegment(saida, saidaCor)
         pie.redraw()
+    }
+
+    fun nomeOficinaService() {
+
+        val request = ExtratoService.extrato()
+        request.fetchLancamentos(token = "Bearer ${sessionManager.fetchAuthToken()}")
+            .enqueue(object : Callback<List<ExtratoVO>> {
+
+                override fun onResponse(call: Call<List<ExtratoVO>>, response: Response<List<ExtratoVO>>) {
+                    if (response.code() == 200) {
+                        nomeOficina.text = response.body()?.get(0)!!.usuario.nomeOficina
+                        LoadingScreen.hideLoading()
+                    }
+                }
+
+                override fun onFailure(call: Call<List<ExtratoVO>>, t: Throwable) {
+                    LoadingScreen.hideLoading()
+                }
+
+            })
     }
 
     fun roundOffDecimal(number: Double): Double {
