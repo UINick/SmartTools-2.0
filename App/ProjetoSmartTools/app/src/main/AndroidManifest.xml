@@ -13,10 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name=".DetalheServico.DetalheVeiculoServico"
+            android:name=".Servicos.DetalheVeiculoServico"
             android:exported="false" />
         <activity
-            android:name=".DetalheServico.CadastroDaPlaca"
+            android:name=".Servicos.CadastroDaPlaca"
             android:exported="false" />
         <activity
             android:name=".Clientes.CadastroCliente.DetalheCliente"

@@ -15,7 +15,7 @@
     <string name="placa_carro_servico">Digite a placa do carro</string>
     <string name="continuar_servico">Continuar Serviço</string>
     <string name="cadastro_carro">Cadastrar Carro</string>
-    <string name="detalhe_carro">Veículo</string>
+    <string name="detalhe_carro">Cadastro serviço</string>
 
     <string name="nome_oficina">Nome da oficina:</string>
     <string name="sair_do_aplicativo">Sair do aplicativo</string>
@@ -27,9 +27,9 @@
 
 
     <string name="nome_cliente">Nome</string>
-    <string name="placa_carro">Placa do Carro</string>
-    <string name="montadora_carro">Montadora</string>
-    <string name="modelo_carro">Modelo</string>
+    <string name="placa_carro">Placa do Carro:</string>
+    <string name="montadora_carro">Montadora:</string>
+    <string name="modelo_carro">Modelo:</string>
 
 
 
