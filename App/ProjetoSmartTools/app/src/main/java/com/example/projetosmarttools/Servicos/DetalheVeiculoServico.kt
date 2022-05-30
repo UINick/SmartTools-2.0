@@ -3,6 +3,7 @@ package com.example.projetosmarttools.Servicos
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.example.projetosmarttools.CadastroVeiculo.VeiculoVO
@@ -19,8 +20,13 @@ class DetalheVeiculoServico : AppCompatActivity() {
     lateinit var modelo: TextView
     lateinit var marca: TextView
     lateinit var placa: TextView
+
+    lateinit var valorServico: EditText
+    lateinit var descicaoServico: EditText
+
     private lateinit var sessionManager: SessionManager
     var idDoVeiculo: Int = 0
+    var placaParaRegistrar: String = ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +35,10 @@ class DetalheVeiculoServico : AppCompatActivity() {
         setContentView(R.layout.activity_detalhe_veiculo_servico)
 
         sessionManager = SessionManager(this)
+
+        valorServico = findViewById(R.id.id_valor_servico)
+        descicaoServico = findViewById(R.id.id_descricao_servico)
+
         modelo = findViewById(R.id.id_modeloo)
         marca = findViewById(R.id.id_montadoraa)
         tipoVeiculo = findViewById(R.id.id_veiculoo)
@@ -55,6 +65,7 @@ class DetalheVeiculoServico : AppCompatActivity() {
         ).enqueue(object : Callback<VeiculoVO> {
             override fun onResponse(call: Call<VeiculoVO>, response: Response<VeiculoVO>) {
                 if (response.code() == 200){
+                    placaParaRegistrar = response.body()!!.placaVeiculo
                     modelo.text = response.body()!!.modeloVeiculo
                     placa.text = response.body()!!.placaVeiculo
                     marca.text = response.body()!!.marcaVeiculo
@@ -72,6 +83,31 @@ class DetalheVeiculoServico : AppCompatActivity() {
     }
 
     fun cadastrarServico(view: View) {
+
+        LoadingScreen.displayLoadingWithText(this, "", false)
+
+        val newService = DetalheServicoVO(
+            categoria = "Outros",
+            descricao = descicaoServico.text.toString(),
+            placa = placaParaRegistrar,
+            valorServico = valorServico.text.toString().toDouble()
+        )
+
+        val request = ServicoService.servico().postNewServico(
+            token = "Bearer ${sessionManager.fetchAuthToken()}",
+            novoServico = newService
+        ).enqueue(object : Callback<Void>{
+            override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                LoadingScreen.hideLoading()
+                finish()
+            }
+
+            override fun onFailure(call: Call<Void>, t: Throwable) {
+                LoadingScreen.hideLoading()
+                Toast.makeText(baseContext, "Deu ruim", Toast.LENGTH_SHORT).show()
+            }
+
+        })
 
     }
 }

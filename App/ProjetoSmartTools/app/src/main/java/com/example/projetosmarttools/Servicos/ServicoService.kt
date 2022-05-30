@@ -8,8 +8,8 @@ import retrofit2.http.*
 
 interface ServicoService {
 
-    @POST("veiculos")
-    fun postNewVeiculo(@Header("Authorization") token: String, @Body novoVeiculo: ServicoVO): Call<Void>
+    @POST("servicos")
+    fun postNewServico(@Header("Authorization") token: String, @Body novoServico: DetalheServicoVO): Call<Void>
 
     @GET("veiculos/{path_variable}")
     fun fetchVeiculoById(@Header("Authorization") token: String, @Path("path_variable") id: Int ): Call<VeiculoVO>
