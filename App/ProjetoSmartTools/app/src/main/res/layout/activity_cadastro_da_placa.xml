@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/search_placa_servico"
         android:layout_width="317dp"
         android:layout_height="42dp"
         android:layout_marginTop="25dp"
