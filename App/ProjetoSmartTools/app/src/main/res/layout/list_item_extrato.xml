@@ -10,6 +10,7 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/cellExtrato"
             android:layout_width="match_parent"
             android:layout_height="110dp"
             android:background="@drawable/view_redonda_cor_background"

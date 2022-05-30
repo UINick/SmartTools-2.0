@@ -25,6 +25,7 @@
             android:drawableBottom="@drawable/ic_money"
             android:fontFamily="@font/poppins_regular"
             android:text="Entrada"
+            android:onClick="clickEntrada"
             android:textSize="15sp"
             />
 
@@ -39,6 +40,7 @@
             android:drawableBottom="@drawable/ic_money"
             android:fontFamily="@font/poppins_regular"
             android:text="Saída"
+            android:onClick="clickSaida"
             android:textSize="15sp"
             />
 
@@ -52,7 +54,8 @@
             android:backgroundTint="#2C3333"
             android:drawableBottom="@drawable/ic_baseline_servicos"
             android:fontFamily="@font/poppins_regular"
-            android:text="Novo Veículo"
+            android:text="Novo Serviço"
+            android:onClick="clickVeiculo"
             android:textSize="15sp"
             />
 
@@ -67,6 +70,7 @@
             android:drawableBottom="@drawable/ic_user_add"
             android:fontFamily="@font/poppins_regular"
             android:text="Novo Cliente"
+            android:onClick="clickCliente"
             android:textSize="15sp"
             />
 

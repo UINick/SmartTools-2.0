@@ -43,7 +43,7 @@ class ServicosAdapter(private val servicoList: ArrayList<ServicoVO>):
         val placa: TextView = itemView.findViewById(R.id.tv_placa_resposta)
         val dataServico: TextView = itemView.findViewById(R.id.tv_data_resposta)
         val status: TextView = itemView.findViewById(R.id.tv_status_resposta)
-        val llStatus: LinearLayout = itemView.findViewById(R.id.ll_status)
+        val llStatus: View = itemView.findViewById(R.id.view_status)
     }
 
 }

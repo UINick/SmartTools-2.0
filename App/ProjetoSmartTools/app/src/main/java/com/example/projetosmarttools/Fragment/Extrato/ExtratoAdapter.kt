@@ -1,6 +1,7 @@
 package com.example.projetosmarttools.Fragment.Extrato
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
@@ -9,6 +10,8 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projetosmarttools.CadastroExtrato.DetalheExtrato
+import com.example.projetosmarttools.Clientes.DetalhesDoCliente
 import com.example.projetosmarttools.R
 
 class ExtratoAdapter(private val extratoList: ArrayList<ExtratoVO>):
@@ -24,18 +27,20 @@ class ExtratoAdapter(private val extratoList: ArrayList<ExtratoVO>):
 
         val currentItem = extratoList[position]
 
-        holder.valor.setText(currentItem.title1)
-        holder.data.setText(currentItem.title2)
+        holder.idExtrato = currentItem.id
+        holder.valor.setText(currentItem.valor.toString())
+        holder.data.setText(currentItem.dataRegistro)
 
-        if (currentItem.isNegative) {
-            holder.viewLateral.setBackgroundResource(R.drawable.view_redonda_vermelho)
-        } else {
+
+        if (currentItem.tipoLancamento == "RECEITA") {
             holder.viewLateral.setBackgroundResource(R.drawable.view_redonda_verde)
+        } else {
+            holder.viewLateral.setBackgroundResource(R.drawable.view_redonda_vermelho)
         }
     }
 
     override fun getItemCount(): Int {
-        print("THE SIZE OF THE ARRAY IS ========= ${extratoList.size}")
+        println("THE SIZE OF THE ARRAY IS ========= ${extratoList.size}")
         return  extratoList.size
     }
 
@@ -43,5 +48,15 @@ class ExtratoAdapter(private val extratoList: ArrayList<ExtratoVO>):
         val data: TextView = itemView.findViewById(R.id.lblSecond)
         val valor: TextView = itemView.findViewById(R.id.txtSecond)
         val viewLateral: LinearLayout = itemView.findViewById(R.id.view_lateral)
+        val cell: LinearLayout = itemView.findViewById(R.id.cellExtrato)
+        var idExtrato: Int = 0
+
+        init {
+            this.cell.setOnClickListener {
+                val detalheExtrato = Intent(it.context, DetalheExtrato::class.java)
+                detalheExtrato.putExtra("idExtrato", idExtrato)
+                it.context.startActivity(detalheExtrato)
+            }
+        }
     }
 }

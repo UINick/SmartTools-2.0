@@ -25,14 +25,10 @@
     <string name="email">Email:</string>
     <string name="nova_transacao">Nova Transação</string>
 
-
     <string name="nome_cliente">Nome</string>
     <string name="placa_carro">Placa do Carro:</string>
     <string name="montadora_carro">Montadora:</string>
     <string name="modelo_carro">Modelo:</string>
-
-
-
 
     <string-array name="categoria_entrada">
         <item>Manutenção</item>

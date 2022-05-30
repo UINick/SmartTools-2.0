@@ -18,6 +18,9 @@
         <activity
             android:name=".Servicos.CadastroDaPlaca"
             android:exported="false" />
+            <activity
+            android:name=".Clientes.DetalhesDoCliente"
+            android:exported="false" />
         <activity
             android:name=".Clientes.CadastroCliente.DetalheCliente"
             android:exported="false" />

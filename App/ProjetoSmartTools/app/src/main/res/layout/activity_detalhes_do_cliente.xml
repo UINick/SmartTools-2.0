@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F2E7"
-    tools:context=".CadastroExtrato.DetalheExtrato">
+    tools:context=".Clientes.DetalhesDoCliente">
+
 
     <View
         android:id="@+id/view"
@@ -25,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/poppins_bold"
-        android:text="Detalhes do Extrato"
+        android:text="Detalhes do Cliente"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/view"
@@ -38,7 +39,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="25dp"
-        android:text="Descrição:  "
+        android:text="Email:  "
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/view"
@@ -50,14 +51,14 @@
         android:layout_height="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="70dp"
-        android:text="Categoria: "
+        android:text="Nome: "
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
-        android:id="@+id/tv_categ_extr"
+        android:id="@+id/tv_data_cli"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="75dp"
@@ -71,20 +72,20 @@
         android:layout_height="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="25dp"
-        android:text="Data: "
+        android:text="Telefone: "
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
-        android:id="@+id/tv_data_extr"
+        android:id="@+id/tv_valor_cli"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/tv_categ_extr" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_data_cli" />
 
     <TextView
         android:id="@+id/tv_categ_cli"
@@ -92,43 +93,40 @@
         android:layout_height="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="25dp"
-        android:text="Preço: "
+        android:text="CPF: "
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
-        android:id="@+id/tv_preco_extr"
+        android:id="@+id/tv_cpf_cli"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/tv_data_extr" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_valor_cli" />
 
     <TextView
-        android:id="@+id/tv_descri_extr"
+        android:id="@+id/tv_descri_cli"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/tv_preco_extr" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_cpf_cli" />
 
     <Button
         android:layout_width="345dp"
         android:layout_height="57dp"
         android:layout_marginTop="26dp"
         android:background="@drawable/botao_cliente"
-        android:onClick="voltar"
+        android:onClick="cadastro"
         android:text="Voltar"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toBottomOf="@+id/view"></Button>
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

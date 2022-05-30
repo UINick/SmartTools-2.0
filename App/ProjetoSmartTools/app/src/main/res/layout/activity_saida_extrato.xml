@@ -14,7 +14,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="300dp"
             android:orientation="vertical"
             android:layout_marginTop="120dp"
             tools:layout_editor_absoluteX="0dp"
@@ -31,7 +31,7 @@
                 android:fontFamily="@font/poppins_bold"
                 android:textColor="@color/white"
                 android:layout_marginTop="30dp"
-                android:layout_marginLeft="120dp"
+                android:layout_gravity="center"
                 android:textSize="24sp"
                 />
 
@@ -52,29 +52,21 @@
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
 
-
             <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/sp_categoria_saida"
-                />
-
-            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/sp_categoria_saida"
+                android:padding="20dp"
                 android:layout_marginLeft="27dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="27dp"
-                android:tooltipText="Data da Entrada"
-                android:id="@+id/ti_data_entrada">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="Data"
-                    android:inputType="date">
-                </com.google.android.material.textfield.TextInputEditText>
-            </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginRight="27dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#C6D9D9"
+                android:layout_marginTop="-15dp"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="27dp">
+            </LinearLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -108,7 +100,7 @@
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
                 android:text="Cadastrar"
-                android:onClick="goToConfirmPassword"
+                android:onClick="cadastrarSaida"
                 android:background="@drawable/botao_mecanico">
             </Button>
         </LinearLayout>

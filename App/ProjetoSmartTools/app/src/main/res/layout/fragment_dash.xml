@@ -35,6 +35,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/nome_oficina"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_bold"
@@ -65,6 +66,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/saldo_geral"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_regular"
@@ -73,6 +75,7 @@
                             android:textSize="18sp" />
 
                         <ImageView
+                            android:id="@+id/eye_icon"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:layout_marginStart="20dp"
@@ -124,6 +127,7 @@
                             </LinearLayout>
 
                             <TextView
+                                android:id="@+id/entrada_geral"
                                 android:layout_width="wrap_content"
                                 android:layout_height="20dp"
                                 android:layout_marginStart="25dp"
@@ -173,6 +177,7 @@
                             </LinearLayout>
 
                             <TextView
+                                android:id="@+id/saida_geral"
                                 android:layout_width="wrap_content"
                                 android:layout_height="20dp"
                                 android:layout_marginStart="25dp"
@@ -214,7 +219,7 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="226dp"
+                            android:layout_height="286dp"
                             android:orientation="vertical">
 
                             <TextView
@@ -231,7 +236,7 @@
                                 android:id="@+id/pieChart"
                                 style="@style/APDefacto.Light"
                                 android:layout_width="fill_parent"
-                                android:layout_height="152dp"
+                                android:layout_height="fill_parent"
                                 app:backgroundColor="#f2f5e7" />
                         </LinearLayout>
 
@@ -242,6 +247,7 @@
 
                             <Button
                                 android:id="@+id/add"
+                                android:layout_marginTop="40dp"
                                 android:layout_width="250dp"
                                 android:layout_height="70dp"
                                 android:layout_gravity="center"
