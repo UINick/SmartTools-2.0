@@ -52,9 +52,7 @@ class ExtratoFragment : Fragment() {
 
                 override fun onResponse(call: Call<List<ExtratoVO>>, response: Response<List<ExtratoVO>>) {
                     if (response.code() == 200) {
-                        if (newArrayList.size > 0) {
-                            newArrayList.clear()
-                        }
+                        newArrayList.clear()
                         response.body()?.forEach { extrato ->
                             newArrayList.add(extrato)
                         }
