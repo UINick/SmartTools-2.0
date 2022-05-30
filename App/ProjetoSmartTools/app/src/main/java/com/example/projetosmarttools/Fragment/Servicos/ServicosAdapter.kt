@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetosmarttools.R
 import com.example.projetosmarttools.Servicos.ServicoDetailsVO
+import java.util.*
+import kotlin.collections.ArrayList
 
 class ServicosAdapter(private val servicoList: ArrayList<ServicoDetailsVO>):
     RecyclerView.Adapter<ServicosAdapter.ViewServicoHolder>() {
@@ -21,10 +23,10 @@ class ServicosAdapter(private val servicoList: ArrayList<ServicoDetailsVO>):
     override fun onBindViewHolder(holder: ServicosAdapter.ViewServicoHolder, position: Int) {
         val currentItem = servicoList[position]
 
-//        holder.ordem.setText(currentItem.ordemServico)
-//        holder.placa.setText(currentItem.descricao)
-//        holder.dataServico.setText(currentItem.dataServico)
-//        holder.status.setText(currentItem.statusServico)
+        holder.ordem.setText(currentItem.ordemServico.toString())
+        holder.placa.setText(currentItem.descricao)
+        holder.dataServico.setText(currentItem.dataServico)
+        holder.status.setText(currentItem.statusServico)
 
         if (currentItem.statusServico == "PENDENTE") {
             holder.llStatus.setBackgroundResource(R.drawable.view_redonda_nao_iniciado)
