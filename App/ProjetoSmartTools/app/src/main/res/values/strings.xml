@@ -19,15 +19,15 @@
 
     <string name="nome_oficina">Nome da oficina:</string>
     <string name="sair_do_aplicativo">Sair do aplicativo</string>
-    <string name="telefone">Telefone:</string>
+    <string name="telefone">Veículo:</string>
     <string name="endereco">Endereço:</string>
     <string name="cnpj">CNPJ:</string>
     <string name="email">Email:</string>
     <string name="nova_transacao">Nova Transação</string>
 
     <string name="nome_cliente">Nome</string>
-    <string name="placa_carro">Placa do Carro:</string>
-    <string name="montadora_carro">Montadora:</string>
+    <string name="placa_carro">Placa:</string>
+    <string name="montadora_carro">Marca:</string>
     <string name="modelo_carro">Modelo:</string>
 
     <string-array name="categoria_entrada">

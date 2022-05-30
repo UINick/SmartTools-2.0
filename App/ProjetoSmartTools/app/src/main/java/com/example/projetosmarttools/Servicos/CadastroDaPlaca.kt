@@ -42,6 +42,8 @@ class CadastroDaPlaca : AppCompatActivity() {
             override fun onResponse(call: Call<VeiculoVO>, response: Response<VeiculoVO>) {
                     LoadingScreen.hideLoading()
                     val servico = Intent(baseContext, DetalheVeiculoServico::class.java)
+                    servico.putExtra("idVeiculo", response.body()!!.idVeiculo)
+                    println("ID PASSADO ===> ${response.body()!!.idVeiculo}")
                     startActivity(servico)
             }
 
