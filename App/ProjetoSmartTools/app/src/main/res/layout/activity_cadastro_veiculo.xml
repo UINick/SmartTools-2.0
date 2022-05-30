@@ -42,7 +42,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="27dp"
                 android:tooltipText="Digite seu CPF"
-                android:id="@+id/ti_cpf">
+                android:id="@+id/ti_cpf_veiculo">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                 android:layout_marginTop="17dp"
                 android:layout_marginRight="27dp"
                 android:tooltipText="Digite o nome do cliente"
-                android:id="@+id/ti_nome_cliente">
+                android:id="@+id/ti_nome_cliente_veiculo">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -77,7 +77,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="27dp"
                 android:tooltipText="Digite sua placa"
-                android:id="@+id/ti_placa">
+                android:id="@+id/ti_placa_veiculo">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -95,7 +95,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="27dp"
                 android:tooltipText="Digite a montadora"
-                android:id="@+id/ti_montadora">
+                android:id="@+id/ti_montadora_veiculo">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -112,7 +112,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="27dp"
                 android:tooltipText="Digite o modelo"
-                android:id="@+id/ti_modelo">
+                android:id="@+id/ti_modelo_veiculo">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -129,7 +129,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="27dp"
                 android:tooltipText="Digite o modelo"
-                android:id="@+id/ti_tipo_veiculo">
+                android:id="@+id/ti_tipo_veiculo_veiculo">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -153,7 +153,7 @@
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
                 android:text="Confirmar cadastro"
-                android:onClick="goToConfirmPassword"
+                android:onClick="cadastrarVeiculo"
                 android:background="@drawable/botao_mecanico">
             </Button>
         </LinearLayout>
