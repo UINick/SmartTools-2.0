@@ -7,8 +7,9 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetosmarttools.R
+import com.example.projetosmarttools.Servicos.ServicoDetailsVO
 
-class ServicosAdapter(private val servicoList: ArrayList<ServicoVO>):
+class ServicosAdapter(private val servicoList: ArrayList<ServicoDetailsVO>):
     RecyclerView.Adapter<ServicosAdapter.ViewServicoHolder>() {
 
 
@@ -20,14 +21,14 @@ class ServicosAdapter(private val servicoList: ArrayList<ServicoVO>):
     override fun onBindViewHolder(holder: ServicosAdapter.ViewServicoHolder, position: Int) {
         val currentItem = servicoList[position]
 
-        holder.ordem.setText(currentItem.ordem)
-        holder.placa.setText(currentItem.placa)
-        holder.dataServico.setText(currentItem.data)
-        holder.status.setText(currentItem.status)
+//        holder.ordem.setText(currentItem.ordemServico)
+//        holder.placa.setText(currentItem.descricao)
+//        holder.dataServico.setText(currentItem.dataServico)
+//        holder.status.setText(currentItem.statusServico)
 
-        if (holder.status.text.toString() == "NÃO INICIADO") {
+        if (currentItem.statusServico == "PENDENTE") {
             holder.llStatus.setBackgroundResource(R.drawable.view_redonda_nao_iniciado)
-        } else if (holder.status.text.toString() == "EM ANDAMENTO") {
+        } else if (currentItem.statusServico == "EM ANDAMENTO") {
             holder.llStatus.setBackgroundResource(R.drawable.view_redonda_em_andamento)
         } else {
             holder.llStatus.setBackgroundResource(R.drawable.view_redonda_finalizado)
@@ -35,6 +36,7 @@ class ServicosAdapter(private val servicoList: ArrayList<ServicoVO>):
     }
 
     override fun getItemCount(): Int {
+        println("Quantidade de servicos ====> ${servicoList.size}")
         return servicoList.size
     }
 

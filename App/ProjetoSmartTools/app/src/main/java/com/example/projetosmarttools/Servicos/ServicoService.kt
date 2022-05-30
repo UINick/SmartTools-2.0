@@ -11,6 +11,9 @@ interface ServicoService {
     @POST("servicos")
     fun postNewServico(@Header("Authorization") token: String, @Body novoServico: DetalheServicoVO): Call<Void>
 
+    @GET("servicos")
+    fun fetchAllServices(@Header("Authorization") token: String): Call<List<ServicoDetailsVO>>
+
     @GET("veiculos/{path_variable}")
     fun fetchVeiculoById(@Header("Authorization") token: String, @Path("path_variable") id: Int ): Call<VeiculoVO>
 

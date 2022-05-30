@@ -71,9 +71,7 @@ class ClienteFragment : Fragment() {
 
                 override fun onResponse(call: Call<List<ClienteVO>>, response: Response<List<ClienteVO>>) {
                     if (response.code() == 200) {
-                        if (newArrayList.size > 0) {
-                            newArrayList.clear()
-                        }
+                        newArrayList.clear()
                         response.body()?.forEach { cliente ->
                             newArrayList.add(cliente)
                         }

@@ -5,51 +5,74 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projetosmarttools.Fragment.Loading.LoadingScreen
 import com.example.projetosmarttools.R
+import com.example.projetosmarttools.Servicos.ServicoDetailsVO
+import com.example.projetosmarttools.Servicos.ServicoService
+import com.example.projetosmarttools.SessionManager
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 class ServicosFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var newArrayList: ArrayList<ServicoVO>
-
-    private lateinit var arrOrdem: Array<String>
-    private lateinit var arrPlaca: Array<String>
-    private lateinit var arrData: Array<String>
-    private lateinit var arrStatus: Array<String>
+    private lateinit var newArrayList: ArrayList<ServicoDetailsVO>
+    private lateinit var sessionManager: SessionManager
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val serv1 = ServicoVO("20","ABC1234", "04/02/2022", "NÃO INICIADO")
-        val serv2 = ServicoVO("20","ABC1234", "04/02/2022", "EM ANDAMENTO")
-        val serv3 = ServicoVO("20","ABC1234", "04/02/2022", "FINALIZADO")
 
-        arrOrdem = arrayOf(serv1.ordem, serv2.ordem, serv3.ordem)
-        arrPlaca = arrayOf(serv1.placa, serv2.placa, serv3.placa)
-        arrData = arrayOf(serv1.data, serv2.data, serv3.data)
-        arrStatus = arrayOf(serv1.status, serv2.status, serv3.status)
-
-
+        sessionManager = SessionManager(requireActivity().baseContext)
         recyclerView = view.findViewById(R.id.recycler_servicos_id)
-
         recyclerView.layoutManager = LinearLayoutManager(activity?.baseContext)
         recyclerView.setHasFixedSize(true)
 
-        newArrayList = arrayListOf<ServicoVO>()
-
-        getUserData()
+        newArrayList = arrayListOf<ServicoDetailsVO>()
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        callService()
+    }
+
+    fun callService() {
+        LoadingScreen.displayLoadingWithText(context, "", false)
+
+        val request = ServicoService.servico().fetchAllServices(token = "Bearer ${sessionManager.fetchAuthToken()}")
+        request.enqueue(object : Callback<List<ServicoDetailsVO>> {
+            override fun onResponse(call: Call<List<ServicoDetailsVO>>, response: Response<List<ServicoDetailsVO>>) {
+
+                if (response.code() == 200) {
+                    newArrayList.clear()
+                    response.body()!!.forEach { servico ->
+                        newArrayList.add(servico)
+                    }
+                    getUserData()
+                    LoadingScreen.hideLoading()
+                }
+            }
+
+            override fun onFailure(call: Call<List<ServicoDetailsVO>>, t: Throwable) {
+                LoadingScreen.hideLoading()
+                Toast.makeText(activity?.baseContext, "Vish", Toast.LENGTH_SHORT).show()
+            }
+
+        })
+    }
+
     private fun getUserData() {
-        for (i in arrOrdem.indices) {
-            val servico = ServicoVO(arrOrdem[i], arrPlaca[i], arrData[i], arrStatus[i])
-            newArrayList.add(servico)
+        if(newArrayList.isEmpty()) {
+            recyclerView.visibility = View.GONE
+        } else {
+            recyclerView.adapter = ServicosAdapter(newArrayList)
         }
-        recyclerView.adapter = ServicosAdapter(newArrayList)
     }
 
     override fun onCreateView(
