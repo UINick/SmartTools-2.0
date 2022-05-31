@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -23,6 +24,7 @@ class ServicosFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var newArrayList: ArrayList<ServicoDetailsVO>
     private lateinit var sessionManager: SessionManager
+    private lateinit var ll_cadastrar: LinearLayout
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -31,6 +33,7 @@ class ServicosFragment : Fragment() {
         sessionManager = SessionManager(requireActivity().baseContext)
         recyclerView = view.findViewById(R.id.recycler_servicos_id)
         recyclerView.layoutManager = LinearLayoutManager(activity?.baseContext)
+        ll_cadastrar = view.findViewById(R.id.ll_cadastrar)
         recyclerView.setHasFixedSize(true)
 
         newArrayList = arrayListOf<ServicoDetailsVO>()
@@ -70,6 +73,7 @@ class ServicosFragment : Fragment() {
     private fun getUserData() {
         if(newArrayList.isEmpty()) {
             recyclerView.visibility = View.GONE
+            ll_cadastrar.visibility = View.VISIBLE
         } else {
             recyclerView.adapter = ServicosAdapter(newArrayList)
         }
