@@ -20,7 +20,7 @@
     <string name="nome_oficina">Nome da oficina:</string>
     <string name="sair_do_aplicativo">Sair do aplicativo</string>
     <string name="telefone">Veículo:</string>
-    <string name="endereco">Endereço:</string>
+    <string name="endereco">Telefone::</string>
     <string name="cnpj">CNPJ:</string>
     <string name="email">Email:</string>
     <string name="nova_transacao">Nova Transação</string>

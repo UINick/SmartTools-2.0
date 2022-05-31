@@ -46,9 +46,15 @@ class LoginClienteActivity : AppCompatActivity() {
                     response: Response<ServicoDetailsVO>
                 ) {
                     LoadingScreen.hideLoading()
-                    val statusConserto = Intent(view.context, StatusConserto::class.java)
-                    statusConserto.putExtra("statusConserto", response.body()!!.statusServico)
-                    startActivity(statusConserto)
+
+                    if (response.code() == 200) {
+                        val statusConserto = Intent(view.context, StatusConserto::class.java)
+                        statusConserto.putExtra("statusConserto", response.body()!!.statusServico)
+                        startActivity(statusConserto)
+                        println(response.body())
+                    } else {
+                        Toast.makeText(baseContext, "VISHHH", Toast.LENGTH_SHORT).show()
+                    }
                 }
 
                 override fun onFailure(call: Call<ServicoDetailsVO>, t: Throwable) {

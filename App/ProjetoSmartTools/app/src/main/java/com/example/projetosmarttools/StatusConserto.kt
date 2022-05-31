@@ -18,11 +18,11 @@ class StatusConserto : AppCompatActivity() {
         val status = intent.getStringExtra("statusConserto")
 
         if (status == "PENDENTE") {
-            img.setBackgroundResource(R.mipmap.aranha)
+            img.setBackgroundResource(R.mipmap.pendente)
         } else if (status == "EM_ANDAMENTO") {
-            img.setBackgroundResource(R.mipmap.aranha)
+            img.setBackgroundResource(R.mipmap.emandamento)
         } else {
-            img.setBackgroundResource(R.mipmap.aranha)
+            img.setBackgroundResource(R.mipmap.finalizado)
         }
 
     }

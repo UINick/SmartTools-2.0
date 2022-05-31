@@ -17,7 +17,6 @@ class TabPageAdapter (activity: FragmentActivity, private val tabCount: Int) : F
             1 -> ExtratoFragment()
             2 -> DashFragment()
             3 -> ServicosFragment()
-            4 -> AjustesFragment()
             else -> DashFragment()
         }
     }
