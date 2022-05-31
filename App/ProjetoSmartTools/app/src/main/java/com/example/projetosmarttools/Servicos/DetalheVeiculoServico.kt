@@ -6,10 +6,10 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.example.projetosmarttools.CadastroVeiculo.VeiculoVO
-import com.example.projetosmarttools.Fragment.Loading.LoadingScreen
+import com.example.projetosmarttools.Cadastro.CadastroVeiculo.VeiculoVO
+import com.example.projetosmarttools.Util.Loading.LoadingScreen
 import com.example.projetosmarttools.R
-import com.example.projetosmarttools.SessionManager
+import com.example.projetosmarttools.Util.SessionManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

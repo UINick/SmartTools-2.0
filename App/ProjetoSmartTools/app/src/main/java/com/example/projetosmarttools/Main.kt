@@ -3,7 +3,7 @@ package com.example.projetosmarttools
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
-import com.example.projetosmarttools.Fragment.TabBarNavigation.TabPageAdapter
+import com.example.projetosmarttools.Util.TabBarNavigation.TabPageAdapter
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_main.*
 

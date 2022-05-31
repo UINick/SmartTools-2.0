@@ -4,9 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import com.example.projetosmarttools.Fragment.Loading.LoadingScreen
+import com.example.projetosmarttools.Util.Loading.LoadingScreen
 import com.example.projetosmarttools.R
-import com.example.projetosmarttools.SessionManager
+import com.example.projetosmarttools.Util.SessionManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

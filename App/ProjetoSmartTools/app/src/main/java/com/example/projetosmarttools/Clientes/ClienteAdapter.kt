@@ -4,10 +4,8 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.projetosmarttools.Clientes.CadastroCliente.DetalheCliente
 import com.example.projetosmarttools.R
 
 class ClienteAdapter(private val clienteList: ArrayList<ClienteVO>):

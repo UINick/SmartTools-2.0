@@ -1,8 +1,5 @@
 package com.example.projetosmarttools.Login.Service
 
-import androidx.appcompat.app.AppCompatActivity
-import com.example.projetosmarttools.Cadastro.Service.Oficina.CadastroOficina
-import android.content.SharedPreferences
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

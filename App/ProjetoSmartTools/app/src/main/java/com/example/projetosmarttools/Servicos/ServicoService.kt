@@ -1,6 +1,6 @@
 package com.example.projetosmarttools.Servicos
 
-import com.example.projetosmarttools.CadastroVeiculo.VeiculoVO
+import com.example.projetosmarttools.Cadastro.CadastroVeiculo.VeiculoVO
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

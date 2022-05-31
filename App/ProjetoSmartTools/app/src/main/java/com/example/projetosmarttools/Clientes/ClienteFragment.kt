@@ -1,20 +1,17 @@
 package com.example.projetosmarttools.Clientes
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.projetosmarttools.Clientes.CadastroCliente.CadastroDoCliente
-import com.example.projetosmarttools.Fragment.Loading.LoadingScreen
+import com.example.projetosmarttools.Util.Loading.LoadingScreen
 import com.example.projetosmarttools.R
-import com.example.projetosmarttools.SessionManager
+import com.example.projetosmarttools.Util.SessionManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

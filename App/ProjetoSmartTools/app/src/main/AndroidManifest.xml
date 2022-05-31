@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name=".StatusConserto"
+            android:name=".Clientes.StatusConserto"
             android:exported="false" />
         <activity
             android:name=".Servicos.AlterarStatusActivity"
@@ -31,25 +31,25 @@
             android:name=".Clientes.DetalhesDoCliente"
             android:exported="false" />
         <activity
-            android:name=".Clientes.CadastroCliente.DetalheCliente"
+            android:name="com.example.projetosmarttools.Cadastro.CadastroCliente.DetalheCliente"
             android:exported="false" />
         <activity
-            android:name=".CadastroExtrato.DetalheExtrato"
+            android:name="com.example.projetosmarttools.Cadastro.CadastroExtrato.DetalheExtrato"
             android:exported="false" />
         <activity
-            android:name=".Clientes.CadastroCliente.CadastroDoCliente"
+            android:name="com.example.projetosmarttools.Cadastro.CadastroCliente.CadastroDoCliente"
             android:exported="false" />
         <activity
-            android:name=".CadastroVeiculo.CadastroVeiculo"
+            android:name="com.example.projetosmarttools.Cadastro.CadastroVeiculo.CadastroVeiculo"
             android:exported="false" />
         <activity
-            android:name=".CadastroExtrato.SaidaExtrato"
+            android:name="com.example.projetosmarttools.Cadastro.CadastroExtrato.SaidaExtrato"
             android:exported="false" />
         <activity
-            android:name=".CadastroExtrato.EntradaExtrato"
+            android:name="com.example.projetosmarttools.Cadastro.CadastroExtrato.EntradaExtrato"
             android:exported="false" />
         <activity
-            android:name=".CadastroVeiculo.Veiculo"
+            android:name="com.example.projetosmarttools.Cadastro.CadastroVeiculo.Veiculo"
             android:exported="false" />
         <activity
             android:name=".ui.login.ClienteCadastro"
@@ -60,13 +60,13 @@
             android:exported="false"
             android:label="@string/title_activity_cadastro_cliente" />
         <activity
-            android:name=".CadastroExtrato.Saida"
+            android:name="com.example.projetosmarttools.Cadastro.CadastroExtrato.Saida"
             android:exported="false" />
         <activity
-            android:name=".CadastroExtrato.Entrada"
+            android:name="com.example.projetosmarttools.Cadastro.CadastroExtrato.Entrada"
             android:exported="false" />
         <activity
-            android:name=".NovasTransacoes"
+            android:name=".Cadastro.NovasTransacoes"
             android:exported="false" />
         <activity
             android:name=".Ajustes"
@@ -75,10 +75,10 @@
             android:name=".Main"
             android:exported="false" />
         <activity
-            android:name=".Cadastro.Activities.CadastroPassword"
+            android:name=".Cadastro.CadastroOficina.CadastroPassword"
             android:exported="false" />
         <activity
-            android:name=".Cadastro.Activities.CadastroOficina"
+            android:name=".Cadastro.CadastroOficina.CadastroOficina"
             android:exported="false" />
         <activity
             android:name=".Login.Activities.LoginDoMecanico"
