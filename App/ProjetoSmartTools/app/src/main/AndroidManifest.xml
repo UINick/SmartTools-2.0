@@ -13,12 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".Servicos.AlterarStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login.Activities.LoginClienteActivity"
+            android:exported="false" />
+        <activity
             android:name=".Servicos.DetalheVeiculoServico"
             android:exported="false" />
         <activity
             android:name=".Servicos.CadastroDaPlaca"
             android:exported="false" />
-            <activity
+        <activity
             android:name=".Clientes.DetalhesDoCliente"
             android:exported="false" />
         <activity

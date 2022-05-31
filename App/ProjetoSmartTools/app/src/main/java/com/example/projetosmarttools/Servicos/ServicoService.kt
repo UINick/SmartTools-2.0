@@ -8,6 +8,9 @@ import retrofit2.http.*
 
 interface ServicoService {
 
+    @PUT("servicos/{path_variable}")
+    fun alterarStatus(@Header("Authorization") token: String, @Path("path_variable") id: Int, @Body status: StatusServicoVO): Call<Void>
+
     @POST("servicos")
     fun postNewServico(@Header("Authorization") token: String, @Body novoServico: DetalheServicoVO): Call<Void>
 

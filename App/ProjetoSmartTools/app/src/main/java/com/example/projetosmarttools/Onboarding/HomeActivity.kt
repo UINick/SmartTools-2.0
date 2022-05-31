@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.example.projetosmarttools.Ajustes
+import com.example.projetosmarttools.Login.Activities.LoginClienteActivity
 import com.example.projetosmarttools.Login.Activities.LoginDoMecanico
 import com.example.projetosmarttools.R
 
@@ -21,6 +22,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun olaCliente(v: View) {
-        Toast.makeText(this, "Logando como Cliente", Toast.LENGTH_LONG).show()
+        val telaLoginCliente = Intent(this, LoginClienteActivity::class.java)
+        startActivity(telaLoginCliente)
     }
 }

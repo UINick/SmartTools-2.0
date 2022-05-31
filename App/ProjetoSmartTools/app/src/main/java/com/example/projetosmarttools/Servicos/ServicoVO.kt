@@ -22,3 +22,7 @@ data class ServicoDetailsVO(
     val dataServico:String,
     val statusServico: String
 )
+
+data class StatusServicoVO(
+    val statusServico: String
+)

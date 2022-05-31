@@ -118,6 +118,9 @@ class DashFragment : Fragment() {
                                 income = response.body()!!.valorTotalReceitas,
                                 outcome = response.body()!!.valorTotalDespesas
                             )
+                    } else {
+                        nomeOficina.text = ""
+                        LoadingScreen.hideLoading()
                     }
 
                 }

@@ -120,6 +120,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_data_resposta" />
 
     <Button
+        android:id="@+id/btn_status"
         android:layout_width="336dp"
         android:layout_height="43dp"
         android:layout_marginStart="25dp"
