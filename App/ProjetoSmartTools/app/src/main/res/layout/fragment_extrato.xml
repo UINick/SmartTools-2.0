@@ -49,16 +49,6 @@
                 android:gravity="center"
                 android:text="Você não possui nenhuma transação cadastrada até agora"
                 android:textColor="@color/black"/>
-
-            <Button
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="80dp"
-                android:layout_gravity="center"
-                android:text="Cadastrar"
-                android:background="@drawable/botao_mecanico"
-                android:onClick="extratoCadatro"/>
-
         </LinearLayout>
 
 

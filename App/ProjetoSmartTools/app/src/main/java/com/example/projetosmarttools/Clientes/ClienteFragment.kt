@@ -24,9 +24,6 @@ class ClienteFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var newArrayList: ArrayList<ClienteVO>
     private lateinit var sessionManager: SessionManager
-    private lateinit var btnCadastrarCliente: Button
-    private lateinit var btnCadastrarFixo: Button
-
     private lateinit var llCadastrar: LinearLayout
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -35,25 +32,13 @@ class ClienteFragment : Fragment() {
         sessionManager = SessionManager(requireActivity().baseContext)
         println("Teste do session ${sessionManager.fetchAuthToken()}")
 
-        newArrayList = arrayListOf<ClienteVO>()
-
-        btnCadastrarFixo = view.findViewById(R.id.btn_cadastrar_fixo)
         llCadastrar = view.findViewById(R.id.ll_cadastrar)
         recyclerView = view.findViewById(R.id.recycler_cliente_id)
-        btnCadastrarCliente = view.findViewById(R.id.btn_CadastrarCliente)
-
-        btnCadastrarCliente.setOnClickListener {
-            val cadastrarCliente = Intent(view.context, CadastroDoCliente::class.java)
-            startActivity(cadastrarCliente)
-        }
-
-        btnCadastrarFixo.setOnClickListener {
-            val cadastrarCliente = Intent(view.context, CadastroDoCliente::class.java)
-            startActivity(cadastrarCliente)
-        }
 
         recyclerView.layoutManager = LinearLayoutManager(activity?.baseContext)
         recyclerView.setHasFixedSize(true)
+
+        newArrayList = arrayListOf<ClienteVO>()
 
     }
 
@@ -98,7 +83,6 @@ class ClienteFragment : Fragment() {
     private fun getUserData() {
         if (newArrayList.isEmpty()) {
             recyclerView.visibility = View.GONE
-            btnCadastrarFixo.visibility = View.GONE
             llCadastrar.visibility = View.VISIBLE
         } else {
             recyclerView.adapter = ClienteAdapter(newArrayList)
