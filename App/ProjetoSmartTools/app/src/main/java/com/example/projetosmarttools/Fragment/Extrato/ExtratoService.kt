@@ -1,6 +1,7 @@
 package com.example.projetosmarttools.Fragment.Extrato
 
 import com.example.projetosmarttools.Clientes.CadastroCliente.CadastroClienteVO
+import com.example.projetosmarttools.Servicos.ServicoDetailsVO
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -25,6 +26,9 @@ interface ExtratoService {
 
     @POST("lancamentos/despesas")
     fun postDespesa(@Header("Authorization") token: String, @Body novaSaida: ExtratoCadastro): Call<Void>
+
+    @GET("consulta-cliente")
+    fun buscarPlacaDoCliente(@Query("placaVeiculo") placa: String): Call<ServicoDetailsVO>
 
     companion object {
         var BASE_URL = "https://apinewsmarttools.herokuapp.com/"
