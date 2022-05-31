@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".StatusConserto"
+            android:exported="false" />
+        <activity
             android:name=".Servicos.AlterarStatusActivity"
             android:exported="false" />
         <activity

@@ -15,6 +15,7 @@ import com.example.projetosmarttools.R
 import com.example.projetosmarttools.Servicos.DetalheVeiculoServico
 import com.example.projetosmarttools.Servicos.ServicoDetailsVO
 import com.example.projetosmarttools.SessionManager
+import com.example.projetosmarttools.StatusConserto
 import com.google.android.material.textfield.TextInputLayout
 import retrofit2.Call
 import retrofit2.Callback
@@ -45,8 +46,9 @@ class LoginClienteActivity : AppCompatActivity() {
                     response: Response<ServicoDetailsVO>
                 ) {
                     LoadingScreen.hideLoading()
-                    Toast.makeText(baseContext, "TOPPPPPPP", Toast.LENGTH_SHORT).show()
-                    println("Opa =====> ${response.body()}")
+                    val statusConserto = Intent(view.context, StatusConserto::class.java)
+                    statusConserto.putExtra("statusConserto", response.body()!!.statusServico)
+                    startActivity(statusConserto)
                 }
 
                 override fun onFailure(call: Call<ServicoDetailsVO>, t: Throwable) {
