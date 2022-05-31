@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:icon="@drawable/ic_baseline_servicos"
                 android:text="Serviços" />
-            
+
         </com.google.android.material.tabs.TabLayout>
 
 
