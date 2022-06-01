@@ -49,7 +49,7 @@ class ServicosFragment : Fragment() {
         val request = ServicoService.servico().fetchAllServices(token = "Bearer ${sessionManager.fetchAuthToken()}")
         request.enqueue(object : Callback<List<ServicoDetailsVO>> {
             override fun onResponse(call: Call<List<ServicoDetailsVO>>, response: Response<List<ServicoDetailsVO>>) {
-
+                println("code ======> ${response.code()}")
                 if (response.code() == 200) {
                     newArrayList.clear()
                     response.body()!!.forEach { servico ->
@@ -57,12 +57,13 @@ class ServicosFragment : Fragment() {
                     }
                     getUserData()
                     LoadingScreen.hideLoading()
+                } else {
+                    LoadingScreen.hideLoading()
                 }
             }
 
             override fun onFailure(call: Call<List<ServicoDetailsVO>>, t: Throwable) {
                 LoadingScreen.hideLoading()
-                Toast.makeText(activity?.baseContext, "Vish", Toast.LENGTH_SHORT).show()
             }
 
         })
